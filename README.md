@@ -129,7 +129,7 @@ GPU-heavy jobs (the LitCVit rebuild, the benchmark and the seeds) live under [`k
 ```bibtex
 @misc{mehta2026bag,
   title  = {{BAG}: Bounding Acquittals of Forged-Header Malware in Raw-Byte Traffic Detectors},
-  author = {Mehta, Deetya Ashish and Sudhakar, Sudarshan and Bhale, Pradeepkumar},
+  author = {Mehta, Deetya Ashish and Sudarshan Sudhakar and Pradeepkumar Bhale},
   year   = {2026},
   note   = {Computer Network Security course project, IIITDM Chennai}
 }
