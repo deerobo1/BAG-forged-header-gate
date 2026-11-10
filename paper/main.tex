@@ -1,0 +1,270 @@
+% Course paper (Computer Network Security), due 2026-11-10. IEEEtran journal class, 8-page limit.
+% Build: see FORMAT_NOTES.md. Previous draft: main_old.tex. Figures: figs/scripts/*.py (from CSVs);
+% tables: make_paper_tables.py (tables/g_*.tex) and make_tables.py (tables/datasets.tex).
+% Every sentence of the abstract, introduction, results and conclusion is mapped in LEDGER_CHECK.md.
+\documentclass[journal]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{url}
+\newtheorem{lemma}{Lemma}
+\newtheorem{property}{Property}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+\begin{document}
+
+\title{Headers May Convict, Never Acquit: Gating Raw-Byte Malware-Traffic Detectors against Forged Header Fields}
+
+\author{Deetya~Ashish~Mehta and Sudarshan~Sudhakar%
+\thanks{\todo{department, institute and e-mail of both authors.}}}
+
+\maketitle
+
+\begin{abstract}
+Raw-byte malicious-traffic detectors such as LitCVit read IP and TCP header fields that recent work calls shortcuts, and the sender sets these fields. Forging only them, with checksums recomputed and payload and lengths unchanged, makes a byte-image detector call at least 59\% of the malware it detected benign on six of seven dataset runs, in each of three seeds; our LitCVit rebuild lets 52--71\% through on the two runs where its weights were kept. Forged packets pass three validators, and 250 of 250 forged handshakes complete against an unmodified Linux stack. We wrap the detector in a gate that clears a flow only if a model blind to the forgeable fields agrees. Under any attack that changes only those fields, attack success is then at most the blind model's own miss rate, a property we check byte by byte on 649{,}966 attacked flows. The gate stays within 0.72 macro-F1 of the full model, recovers 9--51 points over masking on the three runs where masking loses accuracy, and costs up to 3.86 points of benign recall. Chaff packets still evade it on three runs.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Malicious traffic detection, adversarial evasion, shortcut learning, raw-byte classifiers, robustness.
+\end{IEEEkeywords}
+
+% ========================================================================
+\section{Introduction}
+
+\IEEEPARstart{D}{eep} models that read raw packet bytes report near-perfect detection of malicious traffic, often by rendering the first packets of a flow as a small image~\cite{wang2017ustc,zhao2023yatc,nisa2026litcvit}. Audits keep finding that much of this accuracy comes from header fields such as the TTL, the IP identification, the TCP window, sequence numbers and timestamp options~\cite{wickramasinghe2025sok,zhao2025sugar,wang2026shadows,yu2026shortcut}. These works treat the fields as a source of evaluation bias and do not consider an attacker.
+
+The sender sets these fields, and in malware traffic the sender is the attacker. If a benign verdict rests on them, the attacker can earn it without touching the payload, the packet sizes or the number of packets. We began this project as an independent re-check of LitCVit~\cite{nisa2026litcvit}; that audit (Section~\ref{sec:audit}) showed how much its datasets reward header fields, and it is the motivation for this paper.
+
+We keep the full detector F and add a model B that never sees the forgeable bytes, and a unanimity gate that clears a flow only if both agree: the header may convict but never acquit. Under any attack that changes only those bytes, attack success is at most B's own miss rate. A third member, C, reads packet lengths and flags, against attacks that add or resize packets; it is empirical.
+
+\textbf{Contributions.} Each is narrowed by prior work, as stated:
+\begin{enumerate}
+\item \emph{Forgeable shortcuts clear malware.} Header fields earlier work identified as shortcuts are set by the sender. Forging only them, against raw-byte malware detectors with an RFC-justified field set $M$, clears most detected malware on six of seven runs; forged packets are valid and complete live handshakes. Header forging itself is not new~\cite{ling2026flowpaint,prepadding2025}.
+\item \emph{A gate with a stated, tested property.} Keeping the full model and requiring a header-blind model to agree bounds header-only attacks by the blind model's miss rate. The argument is that of monotonic classification~\cite{incer2018monotonic} applied to bytes; we check it flow by flow. The pre-registered test against masking alone passed on only three of seven runs.
+\item \emph{A packet-level member, as a limitation-driven add-on.} C keeps held-out packet attacks under 10\% on four of seven runs, and chaff defeats it on the other three. Certified packet-level defences exist~\cite{yan2025certta}.
+\item \emph{Evaluation findings.} Attack success, not only accuracy, changes with the split, and with benign hosts held out of training benign recall collapses on four runs. Three plausible fixes failed, and we report them.
+\end{enumerate}
+
+% ========================================================================
+\section{Related Work}
+\label{sec:related}
+
+\textbf{Shortcuts in traffic classification.} YaTC~\cite{zhao2023yatc} introduced the five-packet, 320-byte flow image that LitCVit~\cite{nisa2026litcvit} classifies with a lightweight vision transformer; LitCVit's robustness test perturbs payload rows only. Wickramasinghe et al.~\cite{wickramasinghe2025sok} argue from the RFCs that IP identification, checksums and sequence numbers are poor features. Wang et al.~\cite{wang2026shadows} name TTL, checksums, window, sequence numbers and timestamp options as shortcuts, and Yu et al.~\cite{yu2026shortcut} show that the split protocol inflates accuracy. None considers an attacker.
+
+\textbf{Header and packet evasion.} FlowPaint~\cite{ling2026flowpaint} edits IP identification, window, urgent pointer and type of service, with checksums repaired, to evade censorship classifiers; Adversarial Pre-Padding~\cite{prepadding2025} edits TCP fields together with inserted payload bytes against ET-BERT and YaTC; NetMasquerade~\cite{liu2025netmasquerade} adds delays and chaff against flow-statistics detectors. None proposes a defence. We study malware detectors, forge only header fields, and check realizability on live sessions.
+
+\textbf{Robustness from unforgeable features.} Monotonic classifiers~\cite{incer2018monotonic} and conserved features~\cite{tong2019conserved} restrict a model to what the attacker cannot change, and elShehaby and Matrawy~\cite{elshehaby2024perturb} mask flow features that are easy to perturb. We keep the full model and let a header-blind one veto only its benign verdicts.
+
+\textbf{Certified robustness.} BARS~\cite{wang2023bars} certifies traffic models in feature space, and CertTA~\cite{yan2025certta} certifies raw-byte models against packet insertion, padding and delay. Our packet-level member is empirical, and we do not compare with CertTA.
+
+% ========================================================================
+\section{Threat Model and Design Goals}
+\label{sec:threat}
+
+\textbf{Input.} A flow's first five packets, 320 bytes each (bytes 0--79 header, zero-padded; 80--319 payload), form a $40\times40$ image. The Ethernet header is removed and addresses and ports are zeroed, as in LitCVit.
+
+\textbf{Attacker.} The attacker controls the malware host and its server, knows the detector's weights and may adapt. They may change any byte of $M(x)$ in any packet and nothing else; the monitor sees the packets the receiver acts on.
+
+\textbf{The mutable set $M$.} IPv4: type of service, identification, flags and fragment offset, TTL, header checksum and option bytes with the header length kept~\cite{rfc791,rfc6864}. TCP: sequence and acknowledgement numbers, window, checksum, urgent pointer and option values with the data offset kept~\cite{rfc9293,rfc7323}. UDP and ICMP checksums, the rest of the ICMP header, and the IPv6 traffic class, flow label and hop limit. Each field's position is computed per packet from version, header length, protocol and data offset, none of which is in $M$, so changing $M$ cannot move $M$.
+
+\textbf{Out of scope.} Packet count, order, sizes and payload; TCP flags, including the free bits an attacker controlling both ends can set; option lengths and fragmentation; timing, which no image contains; and training-data poisoning.
+
+\textbf{Design goals.} (G1) a header-only attack cannot clear a flow the blind member flags; (G2) clean macro-F1 within 2 points of F; (G3) a small false-alarm cost. Realizability is graded on our own scale: R1 valid packets, R2 accepted by an unmodified receiver, R3 the exchange completes.
+
+% ========================================================================
+\section{Proposed Architecture}
+\label{sec:method}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figs/architecture.pdf}
+\caption{The gate. F reads every byte; B reads the image with the bytes of $M(x)$ zeroed, so forged fields (red) never reach it; C reads 41 length-and-flag numbers. A flow is cleared only if all three say Benign. Shaded: what the guarantee covers; dashed: empirical. Bottom: $M$ in one IPv4/TCP header. Inset: forged fields reach F but not B.}
+\label{fig:arch}
+\end{figure*}
+
+\textbf{Members.} F is a MobileNetV2 (timm \texttt{mobilenetv2\_050}, 0.70\,M parameters) on the image upsampled to $80\times80$, trained for 30 epochs with class-weighted cross-entropy and class-balanced batches; it stands in for LitCVit, whose weights we kept for two runs only. B has the same architecture and recipe with every byte of $M(x)$ zeroed before every forward pass, in training and testing. C is XGBoost~\cite{chen2016xgboost} (200 rounds, depth 6) on 41 numbers per flow (per packet: present, version, protocol, header length, total length, data offset, flags, payload length; plus total payload), trained with copies of malware flows that have added packets.
+
+\textbf{Reading Fig.~\ref{fig:arch}.} The gate flags a flow unless F, B and C all call it benign. B is the anchor: its input is the image with every byte of $M$ set to zero, and the positions of $M$ depend only on bytes outside $M$. An attacker who rewrites TTL, IP identification, window, sequence numbers or option values therefore hands B exactly the image it would have seen anyway, and B's answer cannot change. F stays in the gate because masking alone loses accuracy where those bytes carry real signal (52 points of macro-F1 on IoT-23, of which the gate recovers 51); F's vote can only add flags, so its weakness to forged fields cannot clear a flow B flags. C covers a different gap, added or resized packets, by reading lengths and flags. It is empirical, its flags are attacker-settable, and chaff defeats it on three runs. The figure does not show packet count, packet sizes, payload or timing, none of which the guarantee covers.
+
+\textbf{The guarantee.} Let $x'$ differ from $x$ only in bytes of $M(x)$, and let the models be fixed and deterministic.
+\begin{lemma}
+$M(x')=M(x)$, so $x$ and $x'$ are byte-identical once $M$ is zeroed, and $B(x')=B(x)$.
+\end{lemma}
+\begin{property}
+For any set $S$ of malware flows and any attack that changes only bytes in $M$, adaptive and with knowledge of the weights, the share of $S$ the gate clears after the attack is at most the share of $S$ that B calls Benign as recorded: B's own miss rate. (The gate clears $x'$ only if $B(x')$, hence $B(x)$, is Benign.)
+\end{property}
+This is the argument of monotonic classification~\cite{incer2018monotonic} applied to bytes, a property stated and tested rather than a theorem. It assumes that the monitor sees the receiver's packets, that flow assembly does not depend on bytes in $M$, that nothing outside $M$ changes, and that the models are deterministic. C also reads no byte of $M$, so in our measurements it adds flags under header attacks, but C's accuracy is empirical and the property is stated for B alone.
+
+% ========================================================================
+\section{Implementation and Experiments}
+\label{sec:setup}
+
+\textbf{Datasets.} The six datasets LitCVit uses (Table~\ref{tab:datasets}): USTC-TFC2016~\cite{wang2017ustc}, CICIoT2022~\cite{dadkhah2022ciciot}, 5GAD-2022~\cite{coldwell2022fivegad}, MCFP~\cite{mcfp}, IoT-23~\cite{garcia2020iot23} and TII-SSRC-23~\cite{herzalla2023tii}. \emph{MCFP strict} keeps only flows the infected host starts; it is a subset of MCFP, so there are six datasets and seven runs.
+
+\input{tables/datasets}
+
+\textbf{Pipeline check.} Our converter's images were compared with the images YaTC released for USTC-TFC2016 and CICIoT2022: 11{,}877 YaTC images matched one of our flows, 6{,}857 of them byte for byte; the rest differ in trailing link-layer padding (4{,}579), packet count (300) or otherwise (141).
+
+\textbf{Splits.} Random: 80\% of each class for training, seeds 0--2. Time: the earliest 80\% of each capture, one seed. Benign-host-disjoint: whole benign source hosts go to test until 20\% of benign flows are there; malware is split at random, because most malware classes come from one or two hosts. Thresholds use validation flows only.
+
+\textbf{Attacks.} Inside $M$, checksums recomputed: (a) copy the $M$ fields of a same-dataset benign donor with the same TCP control bits; (b) best of 8 draws of random valid values (TTL $\geq32$, values inside well-formed options); (m) (b) plus a fresh initial sequence number per side. Outside $M$: added packets (c), split payload (d), length copy (L), and chaff (H), 1--3 inserted packets that copy a real header with a wrong sequence number, TTL 1--4 and random payload.
+
+\textbf{Metrics and statistics.} Conditional attack success: of malware detected as recorded, the share called Benign after the attack; unconditional: of all attacked malware. Up to 2{,}000 malware test flows per setting. Macro-F1 and benign recall on clean flows. Paired bootstrap (2{,}000 resamples) with Holm correction over runs.
+
+\textbf{Pre-registration and compute.} Hypotheses and pass marks were committed before any run; each of three amendments was committed before the experiment it changes. Models were trained on Kaggle and Colab GPUs; all sprint-3 analyses ran on a 12-thread laptop CPU from saved weights.
+
+% ========================================================================
+\section{Results and Discussion}
+\label{sec:results}
+
+\subsection{What the detectors read}
+\label{sec:audit}
+
+A random forest given only the 80 header bytes of each packet reaches at least 92\% macro-F1 on every dataset under a random split. On USTC-TFC2016 the rule ``the first packet's TTL is 32 means benign'' separates benign from malware with 100.00\% accuracy. Of the payload bytes the images keep in TLS attack flows, 96.8\% are plaintext, so we make no claim about detection inside encryption. A time split (one seed) lowers CICIoT2022 from 99.6 to 57.2 macro-F1.
+
+\subsection{Header forging breaks undefended detectors}
+\label{sec:n1}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig_attack.pdf}
+\caption{Header-attack success (conditional) by run. MobileNetV2 F, XGBoost and gate F+B: random split, 3-seed mean, bars min--max over seeds (\texttt{e4\_methods.csv}); gate bars are at most 0.94\% in any seed. LitCVit: seed 0, only the two runs with saved weights (\texttt{litcvit\_limits.csv}). Undefended detectors fall; the gate does not.}
+\label{fig:attack}
+\end{figure}
+
+Over the worst of (a), (b) and (m), at least 59\% of the malware F detects is cleared on six of seven runs in every seed; USTC-TFC2016 is the exception, at 1.9--32.7\% across seeds (Fig.~\ref{fig:attack}). XGBoost on the same bytes is cleared at 67.7--100\% on six runs (3-seed means) and 3.6\% on CICIoT2022. Our LitCVit rebuild lets 71.2\% through on MCFP strict and 52.3\% on USTC-TFC2016 under (b), and 0.0\% and 0.1\% under donor copying (a).
+
+\subsection{Realizability}
+\label{sec:realize}
+
+We forged 300 malware flows per run in the raw captures of the five datasets that ship them, with attack (a). Our RFC~1071 check, dpkt and scapy found no malformed packet and no checksum error in 7{,}500 forged packets. In 250 live TCP sessions between two network namespaces every handshake completed with the forged values on the wire, and 243 exchanged data; the 7 failures are caused by copied TCP timestamps and succeed without them.
+
+\subsection{The guarantee, checked}
+\label{sec:bound}
+
+Over 28 settings (seven runs; three random seeds and the time split) and all three header attacks, B's input was byte-identical before and after the attack on all 649{,}966 attacked flows, and in all 336 pre-registered cells the measured success never exceeded its bound. In the 252 gate cells of Table~\ref{tab:bound} it never exceeded B's own miss rate. \textbf{Guaranteed:} the gate's success is at most B's miss rate on the attacked flows. On CICIoT2022's time split (one seed) that rate reaches 30.34\% under (b) and (m), which the two-member gate meets exactly, and 47.21\% under (a). \textbf{Measured, not guaranteed:} the three-member gate lets at most 0.25\% through in every setting tested; that figure depends on C's accuracy.
+
+\begin{table}[t]
+\centering
+\caption{Bound check over the 28 settings: unconditional success (\%), maximum over settings, against the largest miss rate of B under the same attack (the guaranteed bound). Viol.: cells above the bound.}
+\label{tab:bound}
+\setlength{\tabcolsep}{3pt}
+\footnotesize
+\input{tables/g_bound}
+\end{table}
+
+\subsection{Gate versus F, masking and baselines}
+\label{sec:n2}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig_clean_f1.pdf}
+\caption{Clean macro-F1, random split, 3-seed mean, bars min--max over seeds (\texttt{e4\_methods.csv}). Masking (B) loses accuracy on MCFP, IoT-23 and USTC and ties F elsewhere; the gate tracks F.}
+\label{fig:f1}
+\end{figure}
+
+\textbf{The pre-registered test failed: three of seven runs.} It required, on five runs, the gate within 2 points of F, at least 2 points above B, and header success no higher than B's (Table~\ref{tab:n2}). The first condition holds on all seven runs (worst $-0.72$) and the third by construction; the second holds only where masking loses accuracy, on IoT-23 (47.5 for B against 98.4), USTC-TFC2016 (87.9 against 96.9) and MCFP (76.4 against 90.2) (Fig.~\ref{fig:f1}). Per seed the test passes on three, three and four runs, and on three on the time split (one seed). The gate beats B significantly on IoT-23, USTC-TFC2016 and TII-SSRC-23 in every seed, and on MCFP in two ($p_\text{Holm}=0.056$ in seed 1). Elsewhere masking alone suffices; rewriting $M$ at the monitor is equivalent to it.
+
+\begin{table*}[t]
+\centering
+\caption{Gate versus masking, random split, 3-seed means (\texttt{summary\_n2.csv}). Header attack: worst of (a), (b), (m), unconditional. Pass: the pre-registered three-condition mark.}
+\label{tab:n2}
+\setlength{\tabcolsep}{4pt}
+\footnotesize
+\input{tables/g_n2}
+\end{table*}
+
+\textbf{False alarms.} The gate flags whatever any member flags, so its benign recall is 0.02 (USTC-TFC2016) to 3.86 (TII-SSRC-23) points below F's: 2.05 on IoT-23, 1.32 on MCFP and at most 0.21 elsewhere.
+
+\textbf{Other detectors and baselines.} XGBoost behind B keeps its macro-F1 (92.8--99.9, against 93.5--100.0 alone) and lets at most 1.50\% through, so the wrapper is not tied to one model. Adversarial training on donor-forged headers still lets 63.6\% (MCFP) and 73.9\% (MCFP strict) through under (b), and the AND of two independently trained full models 86--100\% on four of seven runs (both seed 0 only).
+
+\subsection{Packet attacks and chaff}
+\label{sec:outside}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figs/fig_packets.pdf}
+\caption{Packet attacks, outside the guarantee: conditional success with C off (gate F+B) and on (gate F+B+C), random split, 3-seed mean, bars min--max over seeds (\texttt{e6\_packets.csv}, C trained on added packets). C stops added packets, split payloads and length copies; chaff still gets through on 5GAD, MCFP and MCFP strict.}
+\label{fig:packets}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figs/fig_operating.pdf}
+\caption{False alarms against success under (b) as F's threshold $t$ rises from 0.5 to 0.999, random split, 3-seed means, bars min--max (\texttt{e9\_curve.csv}). Raising $t$ trades false alarms for success only for F alone; the gate and masking stay near zero at every $t$.}
+\label{fig:operating}
+\end{figure*}
+
+\textbf{The pre-registered mark for C failed: four of seven runs} (held-out success under 10\% and at most 1 point of benign recall lost on five runs; Table~\ref{tab:packets}). Chaff gets 99.7\% through on 5GAD-2022, 54.4\% on MCFP and 47.2\% on MCFP strict (Fig.~\ref{fig:packets}): it carries TTL 1--4, which B cannot see, and gives C a plausible length. Split payloads stay at or below 0.5\% everywhere. \textbf{Both pre-registered fixes failed.} Training C over the attacker's whole range left 5GAD-2022 at 98.2\% and MCFP at 26.8\% and raised IoT-23 to 18.1\%; adding a benign-density flag brought MCFP to 7.5\% but cost more than 1 point of benign recall and left 5GAD-2022 at 60.6\%. Forging the free TCP flag bits (outside $M$) adds at most 0.05 points to the three-member gate's success.
+
+\begin{table}[t]
+\centering
+\caption{Gate F+B+C, held-out packet attacks, conditional success (\%), 3-seed means, random split. Rec.: benign recall lost against F+B.}
+\label{tab:packets}
+\setlength{\tabcolsep}{1.6pt}
+\scriptsize
+\input{tables/g_packets}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig_cost.pdf}
+\caption{Cost per flow, 5GAD-2022 seed 0, 12 CPU threads, median of 5 runs, one measurement (\texttt{e9\_cost.csv}). C's 1{,}800 trees are not counted in parameters or multiply-adds.}
+\label{fig:cost}
+\end{figure}
+
+\subsection{Splits and host memorisation}
+\label{sec:group}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig_splits.pdf}
+\caption{Gate across splits: worst header attack (unconditional) and benign recall. Random: gate F+B, 3 seeds, bars min--max; time: gate F+B, 1 seed, no bar; benign-host: gate$'$ with XGBoost members, 3 seeds (\texttt{e4\_methods.csv}, \texttt{e8\_group.csv}).}
+\label{fig:splits}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig_group_recall.pdf}
+\caption{Benign recall with benign hosts held out of training, XGBoost members, 3-seed mean, bars min--max; diamonds: gate$'$ on the random split, seed 0 (\texttt{e8\_group.csv}). Four runs collapse for every model.}
+\label{fig:group}
+\end{figure}
+
+Attack success depends on the split (Fig.~\ref{fig:splits}): the two-member gate lets 30.34\% through on CICIoT2022's time split (one seed) against at most 1.13\% on random splits. With benign hosts held out of training, benign recall collapses on four runs (Fig.~\ref{fig:group}): for gate$'$ to 11.0\% on IoT-23, 7.2\% on MCFP strict, 31.9\% on TII-SSRC-23 and 33.3\% on MCFP, and to 6--49\% across every model tested on that split, against 94.7--100\% on random splits. The detectors recognise benign \emph{hosts}, not benign behaviour, so every accuracy figure on these datasets, LitCVit's included, is an upper bound for unseen machines. Where benign recall holds, gate$'$ lets at most 0.32\% through under header attacks, against 12.5--100\% for F$'$ alone.
+
+\subsection{Operating point and cost}
+\label{sec:cost}
+
+At F's default threshold the gate raises false alarms on 6.91\% of benign flows on TII-SSRC-23, 5.47\% on IoT-23 and 3.67\% on MCFP, against 3.05\%, 3.42\% and 2.35\% for F alone. Raising F's threshold trades false alarms for header success only for F alone; for the gate, success under (b) stays at or below 0.61\% at every threshold (Fig.~\ref{fig:operating}). The gate doubles parameters and multiply-adds and costs 1.75--2.01 times F's CPU latency (Fig.~\ref{fig:cost}).
+
+% ========================================================================
+\section{Alternatives That Failed}
+\label{sec:failed}
+
+Each was tested against a pass mark set before its results.
+\emph{Two new training losses.} A counterfactual contrastive loss and a one-sided loss (malware with benign headers keeps its label) held against donor copying, but under (b) let up to 73.4\% and 86.7\% through (MobileNetV2, seed 0); the contrastive term also failed its ablation, so it is an augmentation, not a loss.
+\emph{A joint noisy-AND loss} trained on worst-of-K attacks collapsed: clean macro-F1 fell to 55.6 on 5GAD-2022, against 91.7 for F, and benign recall to 38.2\% on IoT-23 (seed 0).
+\emph{Conformal thresholds} on B met their 95\% coverage target on random splits but not under drift: 61.1\% on CICIoT2022's time split (one seed).
+
+% ========================================================================
+\section{Limitations, Ethics and Release}
+\label{sec:discussion}
+
+\textbf{Limitations.} (i) The guarantee covers $M$ only, not packet count, sizes, payload, timing or flags. (ii) Chaff defeats C on three runs, and we did not compare with certified defences~\cite{yan2025certta}. (iii) Benign hosts are memorised; a malware-host-disjoint test is impossible on these datasets, and the benign-host split used XGBoost members only. Nothing here shows that the detectors work on unseen machines or real traffic. (iv) F is a MobileNetV2 stand-in; LitCVit was tested on two runs, and every time-split number is one seed. (v) The gate costs up to 3.86 points of benign recall. (vi) Attack (a) copies same-dataset donors and may partly impersonate known hosts; (b) uses random values, and donors from another dataset (USTC-TFC2016 headers on MCFP strict) cleared 43.8--45.4\% of F's detections across three seeds and 0.0\% of the gate's, but no generic operating-system header profile was tried.
+
+\textbf{Ethics.} All datasets are public. We downloaded packet captures only, never malware binaries, and live sessions ran between two network namespaces on one machine.
+
+\textbf{Release.} \todo{Release statement to be decided by the authors. Current policy: code, capture lists, labelling rules and splits stay private until the authors decide to publish them.}
+
+% ========================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+The header fields that make raw-byte malware detectors look accurate are fields the attacker writes, and forging them alone clears most detected malware on six of seven runs. A unanimity gate with a header-blind member bounds such attacks by that member's miss rate, a property we checked on every attacked flow, and keeps the full model's accuracy where masking loses it. It does not stop chaff, and it cannot repair datasets in which benign traffic is identified by its host.
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

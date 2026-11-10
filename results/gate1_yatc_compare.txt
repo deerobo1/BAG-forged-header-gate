@@ -1,0 +1,57 @@
+### USTC-TFC2016
+YaTC: 4,882 images in USTC-TFC2016_MFR
+ours: 562,415 flows in C:\data\CNS_proj\flows\USTC-TFC2016
+
+class                     images     exact     loose      none identical   trailer   packets     other
+BitTorrent                    75        58        17         0         0        75         0         0
+Cridex                       163       163         0         0        83         0        80         0
+FTP                         1010        87       923         0         0      1010         0         0
+Facetime                      60        53         7         0        53         7         0         0
+Geodo                        409       409         0         0       405         0         4         0
+Gmail                         86        57        29         0         0        86         0         0
+Htbot                         63        63         0         0        61         0         2         0
+Miuref                       134       134         0         0       134         0         0         0
+MySQL                        860        70       790         0         1       859         0         0
+Neris                        337       337         0         0       242        78        17         0
+Nsis-ay                       60        60         0         0        52         5         3         0
+Outlook                       75        75         0         0         0        75         0         0
+SMB                          389       319        70         0       303        86         0         0
+Shifu                         96        96         0         0        81         0        15         0
+Skype                         63        52        11         0         3        60         0         0
+Tinba                         85        85         0         0        62         0        23         0
+Virut                        331       330         1         0        95       224        12         0
+Weibo                        399       397         2         0       386        13         0         0
+WorldOfWarcraft               78         0        78         0         0        78         0         0
+Zeus                         109       109         0         0       107         0         2         0
+all                         4882      2954      1928         0      2068      2656       158         0
+
+YaTC packets minus ours, over 4,882 matched pairs: +0: 4,724, +1: 8, +2: 140, +3: 10
+byte positions (packet, offset) that differ in more than 5% of matched pairs:
+  packet 1: 56-59, 94  (max 7%)
+  packet 2: 52-59  (max 37%)
+  packet 3: 40, 44-45, 52-55  (max 12%)
+  packet 4: 52-55  (max 5%)
+  packet 5: 52-55  (max 8%)
+
+### CICIoT2022
+YaTC: 10,950 images in CICIoT2022_MFR
+ours: 274,839 flows in C:\data\CNS_proj\flows\CICIoT2022
+
+class                     images     exact     loose      none identical   trailer   packets     other
+Attacks_Flood               2492      2491         1         0      1444       948       100         0
+Attacks_Hydra                126       126         0         0       124         2         0         0
+Attacks_Nmap                2398      2398         0         0      1769       629         0         0
+Idle                        1404         0       140      1264         0         0        30       110
+Interactions_Audio           503       497         6         0       369       134         0         0
+Interactions_Cameras        1204      1024       180         0      1002       202         0         0
+Interactions_Other            89        86         3         0        81         8         0         0
+Power_Audio                 1174         0         3      1171         0         0         3         0
+Power_Cameras               1337         0        31      1306         0         0         6        25
+Power_Other                  223         0         9       214         0         0         3         6
+all                        10950      6622       373      3955      4789      1923       142       141
+
+YaTC packets minus ours, over 6,995 matched pairs: -3: 3, -2: 6, -1: 3, +0: 6,853, +1: 126, +2: 2, +3: 2
+byte positions (packet, offset) that differ in more than 5% of matched pairs:
+  packet 2: 40-47  (max 14%)
+  packet 4: 40-47  (max 5%)
+

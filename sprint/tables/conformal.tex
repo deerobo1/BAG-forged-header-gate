@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Coverage (\%) of malware by B's conformal threshold, target 95\%. Random: min and max over 3 seeds. Time static: calibrated on the latest 20\% of training malware; rolling: on the first half of the test period (-- where that half has no malware).}
+\label{tab:conformal}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrr}
+\toprule
+Run & Random min & Random max & Time static & Time rolling \\
+\midrule
+5GAD & 92.1 & 97.8 & 97.2 & -- \\
+CICIoT & 97.4 & 98.9 & 61.1 & 32.4 \\
+IoT-23 & 99.3 & 99.5 & 80.8 & 99.8 \\
+MCFP & 95.1 & 95.6 & 88.4 & 96.8 \\
+MCFP$_{s}$ & 94.8 & 97.3 & 93.4 & -- \\
+TII & 99.8 & 100.0 & 71.3 & 99.8 \\
+USTC & 97.1 & 99.0 & 82.8 & 97.0 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,22 @@
+dataset,model,condition,accuracy,macro_f1,recall,attacked,evaded,detected_clean
+mcfp_strict,litcvit,clean,99.86,99.72,"{""Benign"": 99.9, ""Cobalt"": 99.0, ""Dridex"": 99.9}",,,
+mcfp_strict,litcvit,mimic_stack,99.68,98.71,"{""Benign"": 99.9, ""Cobalt"": 93.8, ""Dridex"": 99.9}",540.0,0.0,100.0
+mcfp_strict,litcvit,isn,99.78,99.34,"{""Benign"": 99.9, ""Cobalt"": 97.9, ""Dridex"": 99.9}",775.0,0.0,99.7
+mcfp_strict,litcvit,mimic_all,99.64,98.5,"{""Benign"": 99.9, ""Cobalt"": 92.8, ""Dridex"": 99.9}",540.0,0.0,100.0
+mcfp_strict,litcvit,stack_random,76.9,56.7,"{""Benign"": 99.9, ""Cobalt"": 43.3, ""Dridex"": 13.9}",775.0,82.4,99.7
+mcfp_strict,litcvit,sequence_random,91.21,83.3,"{""Benign"": 94.8, ""Cobalt"": 87.6, ""Dridex"": 81.1}",775.0,11.9,99.7
+mcfp_strict,litcvit,random,76.86,56.93,"{""Benign"": 99.9, ""Cobalt"": 44.3, ""Dridex"": 13.7}",775.0,82.4,99.7
+mcfp_strict,litcvit-sa,clean,99.78,99.49,"{""Benign"": 99.9, ""Cobalt"": 99.0, ""Dridex"": 99.7}",,,
+mcfp_strict,litcvit-sa,mimic_stack,99.78,99.49,"{""Benign"": 99.9, ""Cobalt"": 99.0, ""Dridex"": 99.7}",540.0,0.0,100.0
+mcfp_strict,litcvit-sa,isn,99.78,99.49,"{""Benign"": 99.9, ""Cobalt"": 99.0, ""Dridex"": 99.7}",775.0,0.0,99.7
+mcfp_strict,litcvit-sa,mimic_all,99.78,99.49,"{""Benign"": 99.9, ""Cobalt"": 99.0, ""Dridex"": 99.7}",540.0,0.0,100.0
+mcfp_strict,litcvit-sa,stack_random,94.16,82.97,"{""Benign"": 99.9, ""Cobalt"": 44.3, ""Dridex"": 84.5}",775.0,20.3,99.7
+mcfp_strict,litcvit-sa,sequence_random,99.78,99.49,"{""Benign"": 99.9, ""Cobalt"": 99.0, ""Dridex"": 99.7}",775.0,0.0,99.7
+mcfp_strict,litcvit-sa,random,91.03,79.62,"{""Benign"": 99.9, ""Cobalt"": 44.3, ""Dridex"": 71.7}",775.0,31.6,99.7
+ustc,litcvit,clean,95.06,95.14,"{""Benign"": 100.0, ""Cridex"": 96.7, ""Geodo"": 98.1, ""Htbot"": 98.8, ""Miuref"": 95.3, ""Neris"": 82.0, ""Nsis-ay"": 95.5, ""Shifu"": 98.9, ""Tinba"": 99.9, ""Virut"": 82.0, ""Zeus"": 99.4}",,,
+ustc,litcvit,mimic_stack,92.5,92.49,"{""Benign"": 100.0, ""Cridex"": 96.6, ""Geodo"": 96.8, ""Htbot"": 97.0, ""Miuref"": 80.2, ""Neris"": 73.8, ""Nsis-ay"": 95.5, ""Shifu"": 98.0, ""Tinba"": 99.9, ""Virut"": 82.0, ""Zeus"": 99.4}",3154.0,0.1,100.0
+ustc,litcvit,isn,94.31,94.38,"{""Benign"": 100.0, ""Cridex"": 96.6, ""Geodo"": 95.8, ""Htbot"": 96.2, ""Miuref"": 93.9, ""Neris"": 80.9, ""Nsis-ay"": 95.7, ""Shifu"": 98.0, ""Tinba"": 99.9, ""Virut"": 81.8, ""Zeus"": 99.4}",19093.0,0.0,100.0
+ustc,litcvit,mimic_all,92.12,92.11,"{""Benign"": 100.0, ""Cridex"": 96.2, ""Geodo"": 96.8, ""Htbot"": 94.4, ""Miuref"": 80.2, ""Neris"": 73.8, ""Nsis-ay"": 95.5, ""Shifu"": 96.5, ""Tinba"": 99.9, ""Virut"": 82.0, ""Zeus"": 99.4}",3154.0,0.4,100.0
+ustc,litcvit,stack_random,44.41,43.8,"{""Benign"": 99.9, ""Cridex"": 0.0, ""Geodo"": 7.6, ""Htbot"": 28.0, ""Miuref"": 2.1, ""Neris"": 13.4, ""Nsis-ay"": 94.0, ""Shifu"": 95.2, ""Tinba"": 99.8, ""Virut"": 8.8, ""Zeus"": 49.6}",19093.0,58.0,100.0
+ustc,litcvit,sequence_random,56.14,56.35,"{""Benign"": 100.0, ""Cridex"": 45.1, ""Geodo"": 23.6, ""Htbot"": 46.1, ""Miuref"": 26.7, ""Neris"": 27.6, ""Nsis-ay"": 95.2, ""Shifu"": 95.6, ""Tinba"": 99.9, ""Virut"": 14.4, ""Zeus"": 51.8}",19093.0,31.6,100.0
+ustc,litcvit,random,44.09,43.3,"{""Benign"": 99.9, ""Cridex"": 0.0, ""Geodo"": 6.2, ""Htbot"": 25.6, ""Miuref"": 2.1, ""Neris"": 13.4, ""Nsis-ay"": 94.0, ""Shifu"": 95.2, ""Tinba"": 99.8, ""Virut"": 8.8, ""Zeus"": 49.6}",19093.0,58.3,100.0

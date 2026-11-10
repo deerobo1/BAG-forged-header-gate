@@ -1,0 +1,3 @@
+dataset,split,model,variant,seed,train,test,accuracy,macro_f1,weighted_f1,seconds,recall
+5gad2022,random,litcvit,untrained,0,7445,1862,76.15,67.41,76.87,286,"{""AMFDel"": 25.0, ""AMFIns"": 100.0, ""AMFUDM"": 83.8, ""CrashNRF"": 100.0, ""GetAllNFs"": 62.5, ""GetUData"": 100.0, ""Normal"": 78.8, ""rndAMFIns"": 96.9, ""rndDump"": 36.7}"
+5gad2022,random,litcvit,full,0,7445,1862,98.12,96.25,98.12,2413,"{""AMFDel"": 90.6, ""AMFIns"": 78.5, ""AMFUDM"": 100.0, ""CrashNRF"": 100.0, ""GetAllNFs"": 100.0, ""GetUData"": 100.0, ""Normal"": 100.0, ""rndAMFIns"": 99.4, ""rndDump"": 97.5}"

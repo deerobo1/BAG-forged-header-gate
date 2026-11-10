@@ -1,0 +1,14 @@
+{
+  "id": "deetyam/litcvit-lightweight-benchmark",
+  "title": "LitCVit lightweight benchmark",
+  "code_file": "bench.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": ["deetyam/litcvit-flows", "deetyam/litcvit-encoder"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

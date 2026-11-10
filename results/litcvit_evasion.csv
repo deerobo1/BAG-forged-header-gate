@@ -1,0 +1,406 @@
+dataset,model,condition,subset,class,flows,recall_clean,recall,benign_clean,benign,evaded
+mcfp_strict,xgb,mimic_ttl,all,all attack,540,100.0,93.3,0.0,6.7,6.7
+mcfp_strict,xgb,mimic_ttl,all,Cobalt,53,100.0,62.3,0.0,37.7,37.7
+mcfp_strict,xgb,mimic_ttl,all,Dridex,487,100.0,96.7,0.0,3.3,3.3
+mcfp_strict,xgb,mimic_ttl,tls,all attack,540,100.0,93.3,0.0,6.7,6.7
+mcfp_strict,xgb,mimic_ttl,tls,Cobalt,53,100.0,62.3,0.0,37.7,37.7
+mcfp_strict,xgb,mimic_ttl,tls,Dridex,487,100.0,96.7,0.0,3.3,3.3
+mcfp_strict,xgb,mimic_window,all,all attack,540,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,xgb,mimic_window,all,Cobalt,53,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,xgb,mimic_window,all,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,xgb,mimic_window,tls,all attack,540,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,xgb,mimic_window,tls,Cobalt,53,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,xgb,mimic_window,tls,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,xgb,mimic_ttl_window,all,all attack,540,100.0,93.0,0.0,7.0,7.0
+mcfp_strict,xgb,mimic_ttl_window,all,Cobalt,53,100.0,62.3,0.0,37.7,37.7
+mcfp_strict,xgb,mimic_ttl_window,all,Dridex,487,100.0,96.3,0.0,3.7,3.7
+mcfp_strict,xgb,mimic_ttl_window,tls,all attack,540,100.0,93.0,0.0,7.0,7.0
+mcfp_strict,xgb,mimic_ttl_window,tls,Cobalt,53,100.0,62.3,0.0,37.7,37.7
+mcfp_strict,xgb,mimic_ttl_window,tls,Dridex,487,100.0,96.3,0.0,3.7,3.7
+mcfp_strict,xgb,mimic_stack,all,all attack,540,100.0,0.0,0.0,100.0,100.0
+mcfp_strict,xgb,mimic_stack,all,Cobalt,53,100.0,0.0,0.0,100.0,100.0
+mcfp_strict,xgb,mimic_stack,all,Dridex,487,100.0,0.0,0.0,100.0,100.0
+mcfp_strict,xgb,mimic_stack,tls,all attack,540,100.0,0.0,0.0,100.0,100.0
+mcfp_strict,xgb,mimic_stack,tls,Cobalt,53,100.0,0.0,0.0,100.0,100.0
+mcfp_strict,xgb,mimic_stack,tls,Dridex,487,100.0,0.0,0.0,100.0,100.0
+mcfp_strict,xgb,mimic_stack_other,all,all attack,521,100.0,5.2,0.0,94.8,94.8
+mcfp_strict,xgb,mimic_stack_other,all,Cobalt,34,100.0,0.0,0.0,100.0,100.0
+mcfp_strict,xgb,mimic_stack_other,all,Dridex,487,100.0,5.5,0.0,94.5,94.5
+mcfp_strict,xgb,mimic_stack_other,tls,all attack,521,100.0,5.2,0.0,94.8,94.8
+mcfp_strict,xgb,mimic_stack_other,tls,Cobalt,34,100.0,0.0,0.0,100.0,100.0
+mcfp_strict,xgb,mimic_stack_other,tls,Dridex,487,100.0,5.5,0.0,94.5,94.5
+mcfp_strict,litcvit,mimic_ttl,all,all attack,540,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_ttl,all,Cobalt,53,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_ttl,all,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_ttl,tls,all attack,540,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_ttl,tls,Cobalt,53,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_ttl,tls,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_window,all,all attack,540,100.0,99.4,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_window,all,Cobalt,53,100.0,94.3,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_window,all,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_window,tls,all attack,540,100.0,99.4,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_window,tls,Cobalt,53,100.0,94.3,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_window,tls,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_ttl_window,all,all attack,540,100.0,99.4,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_ttl_window,all,Cobalt,53,100.0,94.3,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_ttl_window,all,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_ttl_window,tls,all attack,540,100.0,99.4,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_ttl_window,tls,Cobalt,53,100.0,94.3,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_ttl_window,tls,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_stack,all,all attack,540,100.0,99.1,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_stack,all,Cobalt,53,100.0,90.6,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_stack,all,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_stack,tls,all attack,540,100.0,99.1,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_stack,tls,Cobalt,53,100.0,90.6,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_stack,tls,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_stack_other,all,all attack,521,100.0,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_stack_other,all,Cobalt,34,100.0,97.1,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_stack_other,all,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_stack_other,tls,all attack,521,100.0,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_stack_other,tls,Cobalt,34,100.0,97.1,0.0,0.0,0.0
+mcfp_strict,litcvit,mimic_stack_other,tls,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_ttl,all,all attack,540,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_ttl,all,Cobalt,53,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_ttl,all,Dridex,487,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_ttl,tls,all attack,540,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_ttl,tls,Cobalt,53,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_ttl,tls,Dridex,487,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_window,all,all attack,540,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_window,all,Cobalt,53,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_window,all,Dridex,487,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_window,tls,all attack,540,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_window,tls,Cobalt,53,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_window,tls,Dridex,487,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_ttl_window,all,all attack,540,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_ttl_window,all,Cobalt,53,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_ttl_window,all,Dridex,487,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_ttl_window,tls,all attack,540,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_ttl_window,tls,Cobalt,53,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_ttl_window,tls,Dridex,487,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_stack,all,all attack,540,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_stack,all,Cobalt,53,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_stack,all,Dridex,487,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_stack,tls,all attack,540,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_stack,tls,Cobalt,53,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_stack,tls,Dridex,487,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_stack_other,all,all attack,521,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_stack_other,all,Cobalt,34,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_stack_other,all,Dridex,487,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_stack_other,tls,all attack,521,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_stack_other,tls,Cobalt,34,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa,mimic_stack_other,tls,Dridex,487,99.8,99.8,0.0,0.0,0.0
+mcfp_strict,litcvit-ftaug,mimic_ttl,all,all attack,540,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_ttl,all,Cobalt,53,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_ttl,all,Dridex,487,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_ttl,tls,all attack,540,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_ttl,tls,Cobalt,53,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_ttl,tls,Dridex,487,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_window,all,all attack,540,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_window,all,Cobalt,53,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_window,all,Dridex,487,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_window,tls,all attack,540,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_window,tls,Cobalt,53,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_window,tls,Dridex,487,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_ttl_window,all,all attack,540,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_ttl_window,all,Cobalt,53,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_ttl_window,all,Dridex,487,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_ttl_window,tls,all attack,540,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_ttl_window,tls,Cobalt,53,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_ttl_window,tls,Dridex,487,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_stack,all,all attack,540,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_stack,all,Cobalt,53,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_stack,all,Dridex,487,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_stack,tls,all attack,540,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_stack,tls,Cobalt,53,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_stack,tls,Dridex,487,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_stack_other,all,all attack,521,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_stack_other,all,Cobalt,34,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_stack_other,all,Dridex,487,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_stack_other,tls,all attack,521,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_stack_other,tls,Cobalt,34,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-ftaug,mimic_stack_other,tls,Dridex,487,0.0,0.0,100.0,100.0,
+mcfp_strict,litcvit-sa-ftaug,mimic_ttl,all,all attack,540,97.0,97.2,1.9,1.7,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_ttl,all,Cobalt,53,69.8,71.7,18.9,17.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_ttl,all,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_ttl,tls,all attack,540,97.0,97.2,1.9,1.7,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_ttl,tls,Cobalt,53,69.8,71.7,18.9,17.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_ttl,tls,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_window,all,all attack,540,97.0,97.8,1.9,1.1,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_window,all,Cobalt,53,69.8,77.4,18.9,11.3,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_window,all,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_window,tls,all attack,540,97.0,97.8,1.9,1.1,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_window,tls,Cobalt,53,69.8,77.4,18.9,11.3,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_window,tls,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_ttl_window,all,all attack,540,97.0,97.8,1.9,1.1,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_ttl_window,all,Cobalt,53,69.8,77.4,18.9,11.3,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_ttl_window,all,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_ttl_window,tls,all attack,540,97.0,97.8,1.9,1.1,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_ttl_window,tls,Cobalt,53,69.8,77.4,18.9,11.3,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_ttl_window,tls,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_stack,all,all attack,540,97.0,73.1,1.9,25.9,25.3
+mcfp_strict,litcvit-sa-ftaug,mimic_stack,all,Cobalt,53,69.8,67.9,18.9,22.6,14.0
+mcfp_strict,litcvit-sa-ftaug,mimic_stack,all,Dridex,487,100.0,73.7,0.0,26.3,26.3
+mcfp_strict,litcvit-sa-ftaug,mimic_stack,tls,all attack,540,97.0,73.1,1.9,25.9,25.3
+mcfp_strict,litcvit-sa-ftaug,mimic_stack,tls,Cobalt,53,69.8,67.9,18.9,22.6,14.0
+mcfp_strict,litcvit-sa-ftaug,mimic_stack,tls,Dridex,487,100.0,73.7,0.0,26.3,26.3
+mcfp_strict,litcvit-sa-ftaug,mimic_stack_other,all,all attack,521,98.7,100.0,0.2,0.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_stack_other,all,Cobalt,34,79.4,100.0,2.9,0.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_stack_other,all,Dridex,487,100.0,100.0,0.0,0.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_stack_other,tls,all attack,521,98.7,100.0,0.2,0.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_stack_other,tls,Cobalt,34,79.4,100.0,2.9,0.0,0.0
+mcfp_strict,litcvit-sa-ftaug,mimic_stack_other,tls,Dridex,487,100.0,100.0,0.0,0.0,0.0
+ustc,xgb,mimic_ttl,all,all attack,3154,100.0,97.1,0.0,2.8,2.8
+ustc,xgb,mimic_ttl,all,Cridex,972,100.0,100.0,0.0,0.0,0.0
+ustc,xgb,mimic_ttl,all,Geodo,247,100.0,100.0,0.0,0.0,0.0
+ustc,xgb,mimic_ttl,all,Htbot,1026,100.0,99.8,0.0,0.1,0.1
+ustc,xgb,mimic_ttl,all,Miuref,674,100.0,100.0,0.0,0.0,0.0
+ustc,xgb,mimic_ttl,all,Neris,167,100.0,46.7,0.0,50.9,50.9
+ustc,xgb,mimic_ttl,all,Shifu,68,98.5,98.5,0.0,1.5,1.5
+ustc,xgb,mimic_ttl,tls,all attack,181,100.0,100.0,0.0,0.0,0.0
+ustc,xgb,mimic_ttl,tls,Htbot,115,100.0,100.0,0.0,0.0,0.0
+ustc,xgb,mimic_ttl,tls,Shifu,66,100.0,100.0,0.0,0.0,0.0
+ustc,xgb,mimic_window,all,all attack,3154,100.0,63.9,0.0,0.0,0.0
+ustc,xgb,mimic_window,all,Cridex,972,100.0,0.0,0.0,0.0,0.0
+ustc,xgb,mimic_window,all,Geodo,247,100.0,100.0,0.0,0.0,0.0
+ustc,xgb,mimic_window,all,Htbot,1026,100.0,84.1,0.0,0.0,0.0
+ustc,xgb,mimic_window,all,Miuref,674,100.0,100.0,0.0,0.0,0.0
+ustc,xgb,mimic_window,all,Neris,167,100.0,98.2,0.0,0.0,0.0
+ustc,xgb,mimic_window,all,Shifu,68,98.5,98.5,0.0,0.0,0.0
+ustc,xgb,mimic_window,tls,all attack,181,100.0,67.4,0.0,0.0,0.0
+ustc,xgb,mimic_window,tls,Htbot,115,100.0,48.7,0.0,0.0,0.0
+ustc,xgb,mimic_window,tls,Shifu,66,100.0,100.0,0.0,0.0,0.0
+ustc,xgb,mimic_ttl_window,all,all attack,3154,100.0,25.3,0.0,47.8,47.8
+ustc,xgb,mimic_ttl_window,all,Cridex,972,100.0,0.0,0.0,13.7,13.7
+ustc,xgb,mimic_ttl_window,all,Geodo,247,100.0,100.0,0.0,0.0,0.0
+ustc,xgb,mimic_ttl_window,all,Htbot,1026,100.0,26.5,0.0,72.5,72.5
+ustc,xgb,mimic_ttl_window,all,Miuref,674,100.0,31.5,0.0,68.5,68.5
+ustc,xgb,mimic_ttl_window,all,Neris,167,100.0,0.0,0.0,100.0,100.0
+ustc,xgb,mimic_ttl_window,all,Shifu,68,98.5,97.1,0.0,2.9,2.9
+ustc,xgb,mimic_ttl_window,tls,all attack,181,100.0,52.5,0.0,47.5,47.5
+ustc,xgb,mimic_ttl_window,tls,Htbot,115,100.0,25.2,0.0,74.8,74.8
+ustc,xgb,mimic_ttl_window,tls,Shifu,66,100.0,100.0,0.0,0.0,0.0
+ustc,xgb,mimic_stack,all,all attack,3154,100.0,11.6,0.0,73.0,73.0
+ustc,xgb,mimic_stack,all,Cridex,972,100.0,0.0,0.0,50.4,50.4
+ustc,xgb,mimic_stack,all,Geodo,247,100.0,90.3,0.0,9.7,9.7
+ustc,xgb,mimic_stack,all,Htbot,1026,100.0,8.3,0.0,91.5,91.5
+ustc,xgb,mimic_stack,all,Miuref,674,100.0,0.0,0.0,100.0,100.0
+ustc,xgb,mimic_stack,all,Neris,167,100.0,0.0,0.0,100.0,100.0
+ustc,xgb,mimic_stack,all,Shifu,68,98.5,86.8,0.0,13.2,13.2
+ustc,xgb,mimic_stack,tls,all attack,181,100.0,32.6,0.0,67.4,67.4
+ustc,xgb,mimic_stack,tls,Htbot,115,100.0,0.0,0.0,100.0,100.0
+ustc,xgb,mimic_stack,tls,Shifu,66,100.0,89.4,0.0,10.6,10.6
+ustc,xgb,mimic_stack_other,all,all attack,8344,96.9,52.5,0.0,0.0,0.0
+ustc,xgb,mimic_stack_other,all,Cridex,1933,100.0,0.0,0.0,0.0,0.0
+ustc,xgb,mimic_stack_other,all,Geodo,1631,99.4,96.3,0.0,0.0,0.0
+ustc,xgb,mimic_stack_other,all,Htbot,948,100.0,94.6,0.0,0.0,0.0
+ustc,xgb,mimic_stack_other,all,Miuref,1840,99.8,74.9,0.0,0.0,0.0
+ustc,xgb,mimic_stack_other,all,Neris,1460,94.1,7.4,0.0,0.0,0.0
+ustc,xgb,mimic_stack_other,all,Shifu,78,96.2,87.2,0.0,0.0,0.0
+ustc,xgb,mimic_stack_other,all,Virut,430,63.3,78.6,0.0,0.0,0.0
+ustc,xgb,mimic_stack_other,tls,all attack,185,100.0,98.9,0.0,0.0,0.0
+ustc,xgb,mimic_stack_other,tls,Htbot,119,100.0,98.3,0.0,0.0,0.0
+ustc,xgb,mimic_stack_other,tls,Shifu,66,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl,all,all attack,3154,99.9,99.9,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl,all,Cridex,972,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl,all,Geodo,247,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl,all,Htbot,1026,99.8,99.9,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl,all,Miuref,674,99.9,99.9,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl,all,Neris,167,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl,all,Shifu,68,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl,tls,all attack,181,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl,tls,Htbot,115,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl,tls,Shifu,66,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit,mimic_window,all,all attack,3154,99.9,86.4,0.0,0.0,0.0
+ustc,litcvit,mimic_window,all,Cridex,972,100.0,99.8,0.0,0.0,0.0
+ustc,litcvit,mimic_window,all,Geodo,247,100.0,91.5,0.0,0.0,0.0
+ustc,litcvit,mimic_window,all,Htbot,1026,99.8,97.2,0.0,0.0,0.0
+ustc,litcvit,mimic_window,all,Miuref,674,99.9,69.1,0.0,0.0,0.0
+ustc,litcvit,mimic_window,all,Neris,167,100.0,7.2,0.0,0.0,0.0
+ustc,litcvit,mimic_window,all,Shifu,68,100.0,80.9,0.0,0.0,0.0
+ustc,litcvit,mimic_window,tls,all attack,181,100.0,93.4,0.0,0.0,0.0
+ustc,litcvit,mimic_window,tls,Htbot,115,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit,mimic_window,tls,Shifu,66,100.0,81.8,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl_window,all,all attack,3154,99.9,82.9,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl_window,all,Cridex,972,100.0,99.9,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl_window,all,Geodo,247,100.0,89.9,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl_window,all,Htbot,1026,99.8,96.8,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl_window,all,Miuref,674,99.9,54.3,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl_window,all,Neris,167,100.0,6.6,0.0,0.6,0.6
+ustc,litcvit,mimic_ttl_window,all,Shifu,68,100.0,75.0,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl_window,tls,all attack,181,100.0,91.2,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl_window,tls,Htbot,115,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit,mimic_ttl_window,tls,Shifu,66,100.0,75.8,0.0,0.0,0.0
+ustc,litcvit,mimic_stack,all,all attack,3154,99.9,82.6,0.0,0.1,0.1
+ustc,litcvit,mimic_stack,all,Cridex,972,100.0,99.9,0.0,0.0,0.0
+ustc,litcvit,mimic_stack,all,Geodo,247,100.0,89.1,0.0,0.0,0.0
+ustc,litcvit,mimic_stack,all,Htbot,1026,99.8,96.8,0.0,0.1,0.1
+ustc,litcvit,mimic_stack,all,Miuref,674,99.9,54.6,0.0,0.0,0.0
+ustc,litcvit,mimic_stack,all,Neris,167,100.0,0.6,0.0,1.2,1.2
+ustc,litcvit,mimic_stack,all,Shifu,68,100.0,76.5,0.0,0.0,0.0
+ustc,litcvit,mimic_stack,tls,all attack,181,100.0,91.7,0.0,0.0,0.0
+ustc,litcvit,mimic_stack,tls,Htbot,115,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit,mimic_stack,tls,Shifu,66,100.0,77.3,0.0,0.0,0.0
+ustc,litcvit,mimic_stack_other,all,all attack,8344,92.9,45.2,0.0,0.0,0.0
+ustc,litcvit,mimic_stack_other,all,Cridex,1933,100.0,0.4,0.0,0.0,0.0
+ustc,litcvit,mimic_stack_other,all,Geodo,1631,98.8,94.0,0.0,0.0,0.0
+ustc,litcvit,mimic_stack_other,all,Htbot,948,99.8,89.9,0.0,0.0,0.0
+ustc,litcvit,mimic_stack_other,all,Miuref,1840,95.9,54.7,0.0,0.0,0.0
+ustc,litcvit,mimic_stack_other,all,Neris,1460,83.7,0.2,0.0,0.1,0.1
+ustc,litcvit,mimic_stack_other,all,Shifu,78,92.3,78.2,0.0,0.0,0.0
+ustc,litcvit,mimic_stack_other,all,Virut,430,43.0,67.0,0.0,0.0,0.0
+ustc,litcvit,mimic_stack_other,tls,all attack,185,100.0,88.1,0.0,0.0,0.0
+ustc,litcvit,mimic_stack_other,tls,Htbot,119,100.0,89.1,0.0,0.0,0.0
+ustc,litcvit,mimic_stack_other,tls,Shifu,66,100.0,86.4,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl,all,all attack,3154,99.7,99.8,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl,all,Cridex,972,99.9,99.9,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl,all,Geodo,247,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl,all,Htbot,1026,99.7,99.7,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl,all,Miuref,674,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl,all,Neris,167,97.6,98.8,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl,all,Shifu,68,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl,tls,all attack,181,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl,tls,Htbot,115,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl,tls,Shifu,66,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_window,all,all attack,3154,99.7,99.7,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_window,all,Cridex,972,99.9,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_window,all,Geodo,247,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_window,all,Htbot,1026,99.7,99.6,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_window,all,Miuref,674,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_window,all,Neris,167,97.6,97.6,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_window,all,Shifu,68,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_window,tls,all attack,181,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_window,tls,Htbot,115,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_window,tls,Shifu,66,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl_window,all,all attack,3154,99.7,99.8,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl_window,all,Cridex,972,99.9,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl_window,all,Geodo,247,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl_window,all,Htbot,1026,99.7,99.6,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl_window,all,Miuref,674,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl_window,all,Neris,167,97.6,98.2,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl_window,all,Shifu,68,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl_window,tls,all attack,181,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl_window,tls,Htbot,115,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_ttl_window,tls,Shifu,66,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack,all,all attack,3154,99.7,99.7,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack,all,Cridex,972,99.9,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack,all,Geodo,247,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack,all,Htbot,1026,99.7,99.6,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack,all,Miuref,674,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack,all,Neris,167,97.6,97.6,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack,all,Shifu,68,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack,tls,all attack,181,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack,tls,Htbot,115,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack,tls,Shifu,66,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack_other,all,all attack,8344,93.6,64.1,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack_other,all,Cridex,1933,99.9,32.5,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack_other,all,Geodo,1631,100.0,94.6,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack_other,all,Htbot,948,99.4,95.7,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack_other,all,Miuref,1840,95.8,52.6,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack_other,all,Neris,1460,97.8,81.4,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack_other,all,Shifu,78,92.3,92.3,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack_other,all,Virut,430,5.8,5.1,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack_other,tls,all attack,185,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack_other,tls,Htbot,119,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-sa,mimic_stack_other,tls,Shifu,66,100.0,100.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl,all,all attack,3154,51.2,51.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl,all,Cridex,972,0.0,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl,all,Geodo,247,0.0,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl,all,Htbot,1026,88.2,89.1,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl,all,Miuref,674,97.9,96.3,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl,all,Neris,167,28.1,27.5,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl,all,Shifu,68,2.9,1.5,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl,tls,all attack,181,56.9,55.8,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl,tls,Htbot,115,88.7,87.8,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl,tls,Shifu,66,1.5,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_window,all,all attack,3154,51.2,48.1,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_window,all,Cridex,972,0.0,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_window,all,Geodo,247,0.0,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_window,all,Htbot,1026,88.2,81.2,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_window,all,Miuref,674,97.9,93.3,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_window,all,Neris,167,28.1,32.9,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_window,all,Shifu,68,2.9,1.5,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_window,tls,all attack,181,56.9,54.1,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_window,tls,Htbot,115,88.7,85.2,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_window,tls,Shifu,66,1.5,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl_window,all,all attack,3154,51.2,48.2,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl_window,all,Cridex,972,0.0,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl_window,all,Geodo,247,0.0,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl_window,all,Htbot,1026,88.2,82.6,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl_window,all,Miuref,674,97.9,91.4,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl_window,all,Neris,167,28.1,33.5,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl_window,all,Shifu,68,2.9,1.5,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl_window,tls,all attack,181,56.9,54.1,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl_window,tls,Htbot,115,88.7,85.2,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_ttl_window,tls,Shifu,66,1.5,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack,all,all attack,3154,51.2,47.9,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack,all,Cridex,972,0.0,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack,all,Geodo,247,0.0,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack,all,Htbot,1026,88.2,82.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack,all,Miuref,674,97.9,90.8,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack,all,Neris,167,28.1,34.7,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack,all,Shifu,68,2.9,1.5,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack,tls,all attack,181,56.9,54.1,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack,tls,Htbot,115,88.7,85.2,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack,tls,Shifu,66,1.5,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack_other,all,all attack,8344,27.9,28.8,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack_other,all,Cridex,1933,0.0,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack_other,all,Geodo,1631,15.3,15.4,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack_other,all,Htbot,948,85.3,84.9,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack_other,all,Miuref,1840,51.4,51.6,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack_other,all,Neris,1460,21.8,27.4,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack_other,all,Shifu,78,2.6,2.6,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack_other,all,Virut,430,0.0,0.0,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack_other,tls,all attack,185,56.2,56.2,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack_other,tls,Htbot,119,86.6,86.6,0.0,0.0,0.0
+ustc,litcvit-ftaug,mimic_stack_other,tls,Shifu,66,1.5,1.5,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl,all,all attack,3154,40.8,41.1,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl,all,Cridex,972,45.3,46.2,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl,all,Geodo,247,0.4,0.4,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl,all,Htbot,1026,57.0,56.9,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl,all,Miuref,674,10.5,10.5,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl,all,Neris,167,80.2,80.2,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl,all,Shifu,68,83.8,83.8,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl,tls,all attack,181,93.9,93.9,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl,tls,Htbot,115,98.3,98.3,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl,tls,Shifu,66,86.4,86.4,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_window,all,all attack,3154,40.8,43.9,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_window,all,Cridex,972,45.3,48.5,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_window,all,Geodo,247,0.4,0.4,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_window,all,Htbot,1026,57.0,57.7,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_window,all,Miuref,674,10.5,18.2,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_window,all,Neris,167,80.2,80.8,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_window,all,Shifu,68,83.8,94.1,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_window,tls,all attack,181,93.9,97.8,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_window,tls,Htbot,115,98.3,98.3,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_window,tls,Shifu,66,86.4,97.0,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl_window,all,all attack,3154,40.8,44.2,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl_window,all,Cridex,972,45.3,48.8,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl_window,all,Geodo,247,0.4,0.8,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl_window,all,Htbot,1026,57.0,57.5,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl_window,all,Miuref,674,10.5,19.0,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl_window,all,Neris,167,80.2,80.8,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl_window,all,Shifu,68,83.8,94.1,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl_window,tls,all attack,181,93.9,97.8,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl_window,tls,Htbot,115,98.3,98.3,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_ttl_window,tls,Shifu,66,86.4,97.0,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack,all,all attack,3154,40.8,44.3,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack,all,Cridex,972,45.3,48.9,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack,all,Geodo,247,0.4,0.4,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack,all,Htbot,1026,57.0,57.6,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack,all,Miuref,674,10.5,19.0,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack,all,Neris,167,80.2,82.0,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack,all,Shifu,68,83.8,94.1,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack,tls,all attack,181,93.9,97.8,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack,tls,Htbot,115,98.3,98.3,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack,tls,Shifu,66,86.4,97.0,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack_other,all,all attack,8344,29.0,29.2,0.2,0.2,0.2
+ustc,litcvit-sa-ftaug,mimic_stack_other,all,Cridex,1933,22.8,23.2,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack_other,all,Geodo,1631,0.1,0.4,0.9,1.0,0.6
+ustc,litcvit-sa-ftaug,mimic_stack_other,all,Htbot,948,52.3,50.6,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack_other,all,Miuref,1840,3.9,3.5,0.3,0.2,0.1
+ustc,litcvit-sa-ftaug,mimic_stack_other,all,Neris,1460,91.0,93.8,0.0,0.1,0.1
+ustc,litcvit-sa-ftaug,mimic_stack_other,all,Shifu,78,73.1,79.5,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack_other,all,Virut,430,5.6,2.3,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack_other,tls,all attack,185,93.5,96.2,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack_other,tls,Htbot,119,97.5,97.5,0.0,0.0,0.0
+ustc,litcvit-sa-ftaug,mimic_stack_other,tls,Shifu,66,86.4,93.9,0.0,0.0,0.0

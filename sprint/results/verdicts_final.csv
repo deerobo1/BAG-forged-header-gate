@@ -1,0 +1,23 @@
+Method,Seed 0,Seed 1,Seed 2,Time,3-seed mean,Verdict
+gate+C_A,5.0,5.0,4.0,6.0,5.0,ADOPT
+gate+C_AS,5.0,5.0,4.0,6.0,5.0,ADOPT
+C,1.0,1.0,2.0,3.0,1.0,DROP
+C_A,2.0,2.0,2.0,4.0,2.0,DROP
+C_AS,2.0,2.0,2.0,4.0,2.0,DROP
+C_S,1.0,1.0,2.0,3.0,1.0,DROP
+and_plain,1.0,,,1.0,,DROP
+gate_B_S,2.0,,,2.0,,DROP
+gate_B_dro,,,,2.0,,DROP
+gate_k41,2.0,2.0,2.0,2.0,2.0,DROP
+nand,2.0,,,2.0,,DROP
+nand_F,1.0,,,1.0,,DROP
+nand_wok,2.0,,,2.0,,DROP
+nand_wok_F,1.0,,,2.0,,DROP
+plain,1.0,1.0,1.0,2.0,1.0,DROP
+xgb,0.0,1.0,0.0,1.0,0.0,DROP
+adv8,3.0,,,2.0,,MAYBE
+adv8_gate,3.0,,,2.0,,MAYBE
+gate+C,4.0,4.0,3.0,4.0,3.0,MAYBE
+gate+C_S,4.0,4.0,4.0,4.0,4.0,MAYBE
+gate_B_A,3.0,,,4.0,,MAYBE
+xgb_gate,3.0,3.0,4.0,3.0,3.0,MAYBE

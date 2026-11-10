@@ -1,0 +1,10 @@
+dataset,input,masked_bytes_per_packet,macro_f1
+iot23,full,36.1,99.17
+iot23,shortcut fields zeroed,36.1,67.03
+iot23,fixed-offset _min,36.1,67.03
+5gad2022,full,33.7,99.9
+5gad2022,shortcut fields zeroed,33.7,91.52
+5gad2022,fixed-offset _min,33.7,91.52
+ustc,full,23.2,96.75
+ustc,shortcut fields zeroed,23.2,87.98
+ustc,fixed-offset _min,23.2,87.93

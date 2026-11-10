@@ -1,0 +1,6 @@
+run,sessions,handshake_ok,echo_ok,syn_values_on_wire,with_tcp_options,echo_failed_all_timestamp_only
+5gad2022,50,50,43,50,50,True
+ciciot2022,50,50,50,50,0,True
+iot23,50,50,50,50,8,True
+mcfp,50,50,50,50,1,True
+ustc,50,50,50,50,0,True

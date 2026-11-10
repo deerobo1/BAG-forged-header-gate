@@ -1,0 +1,15 @@
+model,dataset,clean,mimic_stack,evaded
+mobilenetv2,5gad2022,91.9,89.2,0.0
+mobilenetv2,mcfp,88.7,87.1,0.4
+mobilenetv2,mcfp_strict,99.6,97.7,0.0
+mobilenetv2,ciciot2022,98.4,91.8,0.1
+mobilenetv2,tii_ssrc23,99.1,95.5,0.0
+mobilenetv2,iot23,98.4,52.1,0.0
+mobilenetv2,ustc,96.9,87.1,0.0
+shufflenet,5gad2022,88.8,80.7,0.0
+shufflenet,mcfp,87.7,86.2,0.9
+shufflenet,mcfp_strict,99.0,98.6,0.0
+shufflenet,ciciot2022,95.5,71.1,0.0
+shufflenet,tii_ssrc23,98.9,95.0,0.0
+shufflenet,iot23,98.3,50.8,0.0
+shufflenet,ustc,97.0,86.3,0.0

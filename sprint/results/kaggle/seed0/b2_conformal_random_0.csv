@@ -1,0 +1,8 @@
+run,split,seed,calibration,threshold,coverage,target,benign_recall,argmax_certified
+5gad2022,random,0,random_halves,-0.00019751923656435426,97.85,95.0,99.26,100.0
+mcfp,random,0,random_halves,-0.032251248731247,95.23,95.0,97.32,98.3
+mcfp_strict,random,0,random_halves,-0.00014010388043476463,94.84,95.0,99.71,99.75
+ciciot2022,random,0,random_halves,-0.003457863639050082,97.43,95.0,99.7,99.6
+tii_ssrc23,random,0,random_halves,-0.37040389603158286,99.98,95.0,94.62,99.98
+iot23,random,0,random_halves,-0.026894359637539056,99.37,95.0,94.23,99.9
+ustc,random,0,random_halves,-1.2137514314281006e-05,98.98,95.0,100.0,99.97

@@ -1,0 +1,12 @@
+class,flows,ttl32%
+Benign,10000,100.0
+Cridex,10000,0.0
+Geodo,10000,0.0
+Htbot,8093,0.0
+Miuref,10000,0.0
+Neris,10000,0.02
+Nsis-ay,7371,0.01
+Shifu,10000,0.0
+Tinba,10000,0.0
+Virut,10000,0.0
+Zeus,10000,0.0

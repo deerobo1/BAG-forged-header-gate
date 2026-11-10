@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{LitCVit as reported (Table III there) and as reimplemented here (seed 0), in \%. The paper does not say which F1 it reports; ours is macro-F1. MCFP$_{s}$ as in Table~\ref{tab:table7}.}
+\label{tab:litcvit}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{2}{c}{Reported} & \multicolumn{2}{c}{Random} & \multicolumn{2}{c}{Time} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Dataset & Acc. & F1 & Acc. & F1 & Acc. & F1 \\
+\midrule
+USTC-TFC2016 & 98.4 & 98.3 & 95.0 & 95.1 & 97.1 & 97.1 \\
+CICIoT2022 & 99.1 & 99.1 & 99.0 & 95.6 & 65.8 & 59.6 \\
+5GAD-2022 & 97.2 & 97.2 & 90.3 & 79.1 & 90.8 & 80.9 \\
+MCFP & 97.7 & 97.7 & 99.6 & 94.9 & 97.3 & 79.8 \\
+MCFP$_{s}$ & -- & -- & 99.9 & 99.7 & 99.9 & 99.4 \\
+IoT-23 & 98.5 & 98.1 & 98.5 & 98.6 & 98.4 & 98.2 \\
+TII-SSRC-23 & 98.6 & 98.0 & 99.8 & 99.6 & 99.2 & 99.2 \\
+\bottomrule
+\end{tabular}
+\end{table}

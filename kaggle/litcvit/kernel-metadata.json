@@ -1,0 +1,14 @@
+{
+  "id": "deetyam/litcvit-reimplementation",
+  "title": "LitCVit reimplementation",
+  "code_file": "litcvit.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": ["deetyam/litcvit-flows"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

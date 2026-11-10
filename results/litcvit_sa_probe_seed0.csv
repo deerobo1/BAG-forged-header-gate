@@ -1,0 +1,17 @@
+dataset,encoder,features,train,test,shift,clean,random
+5gad2022,litcvit,packet tokens,7445,1862,0.593,57.65,17.29
+5gad2022,litcvit,flow embedding,7445,1862,0.95,37.14,8.08
+5gad2022,litcvit-sa,packet tokens,7445,1862,0.069,91.22,84.43
+5gad2022,litcvit-sa,flow embedding,7445,1862,0.186,88.85,32.91
+iot23,litcvit,packet tokens,10000,9807,0.6769999861717224,88.05,26.34
+iot23,litcvit,flow embedding,10000,9807,0.7900000214576721,75.79,17.62
+iot23,litcvit-sa,packet tokens,10000,9807,0.2199999988079071,92.49,23.67
+iot23,litcvit-sa,flow embedding,10000,9807,0.35499998927116394,89.56,30.12
+ciciot2022,litcvit,packet tokens,10000,4668,0.6570000052452087,75.5,11.79
+ciciot2022,litcvit,flow embedding,10000,4668,0.8700000047683716,72.44,6.93
+ciciot2022,litcvit-sa,packet tokens,10000,4668,0.2460000067949295,98.39,56.17
+ciciot2022,litcvit-sa,flow embedding,10000,4668,0.9279999732971191,96.24,10.75
+ustc,litcvit,packet tokens,10000,21093,0.4779999852180481,89.03,43.12
+ustc,litcvit,flow embedding,10000,21093,0.6570000052452087,80.97,42.49
+ustc,litcvit-sa,packet tokens,10000,21093,0.07999999821186066,94.0,52.73
+ustc,litcvit-sa,flow embedding,10000,21093,0.35600000619888306,92.2,44.19

@@ -1,0 +1,14 @@
+{
+  "id": "deetyam/litcvit-5gad-ablation",
+  "title": "LitCVit 5GAD ablation",
+  "code_file": "ablation.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": ["deetyam/litcvit-flows", "deetyam/litcvit-encoder"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

@@ -1,0 +1,6 @@
+run,malware_flows_read,donor_flows,forged_flows,forged_packets,complete_packets,original_tcp_csum_bad,per_packet_donors,own_malformed,own_ip_csum,own_tcp_csum,dpkt_malformed,dpkt_ip_csum,dpkt_tcp_csum,scapy_malformed,scapy_ip_csum,scapy_tcp_csum
+5gad2022,900,3000,300,1500,1500,1500,0,0,0,0,0,0,0,0,0,0
+ciciot2022,900,3000,300,1500,1500,0,117,0,0,0,0,0,0,0,0,0
+iot23,900,3000,300,1500,1500,0,300,0,0,0,0,0,0,0,0,0
+mcfp,900,3000,300,1500,1500,0,2,0,0,0,0,0,0,0,0,0
+ustc,900,3000,300,1500,1500,107,93,0,0,0,0,0,0,0,0,0

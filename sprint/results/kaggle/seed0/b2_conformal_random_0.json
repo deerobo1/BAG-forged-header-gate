@@ -1,0 +1,79 @@
+[
+ {
+  "run": "5gad2022",
+  "split": "random",
+  "seed": 0,
+  "calibration": "random_halves",
+  "threshold": -0.00019751923656435426,
+  "coverage": 97.85,
+  "target": 95.0,
+  "benign_recall": 99.26,
+  "argmax_certified": 100.0
+ },
+ {
+  "run": "mcfp",
+  "split": "random",
+  "seed": 0,
+  "calibration": "random_halves",
+  "threshold": -0.032251248731247,
+  "coverage": 95.23,
+  "target": 95.0,
+  "benign_recall": 97.32,
+  "argmax_certified": 98.3
+ },
+ {
+  "run": "mcfp_strict",
+  "split": "random",
+  "seed": 0,
+  "calibration": "random_halves",
+  "threshold": -0.00014010388043476463,
+  "coverage": 94.84,
+  "target": 95.0,
+  "benign_recall": 99.71,
+  "argmax_certified": 99.75
+ },
+ {
+  "run": "ciciot2022",
+  "split": "random",
+  "seed": 0,
+  "calibration": "random_halves",
+  "threshold": -0.003457863639050082,
+  "coverage": 97.43,
+  "target": 95.0,
+  "benign_recall": 99.7,
+  "argmax_certified": 99.6
+ },
+ {
+  "run": "tii_ssrc23",
+  "split": "random",
+  "seed": 0,
+  "calibration": "random_halves",
+  "threshold": -0.37040389603158286,
+  "coverage": 99.98,
+  "target": 95.0,
+  "benign_recall": 94.62,
+  "argmax_certified": 99.98
+ },
+ {
+  "run": "iot23",
+  "split": "random",
+  "seed": 0,
+  "calibration": "random_halves",
+  "threshold": -0.026894359637539056,
+  "coverage": 99.37,
+  "target": 95.0,
+  "benign_recall": 94.23,
+  "argmax_certified": 99.9
+ },
+ {
+  "run": "ustc",
+  "split": "random",
+  "seed": 0,
+  "calibration": "random_halves",
+  "threshold": -1.2137514314281006e-05,
+  "coverage": 98.98,
+  "target": 95.0,
+  "benign_recall": 100.0,
+  "argmax_certified": 99.97
+ }
+]

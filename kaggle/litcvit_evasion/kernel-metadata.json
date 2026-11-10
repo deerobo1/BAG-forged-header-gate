@@ -1,0 +1,14 @@
+{
+  "id": "deetyam/litcvit-evasion-test",
+  "title": "LitCVit evasion test",
+  "code_file": "evasion.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": ["deetyam/litcvit-flows", "deetyam/litcvit-encoder"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

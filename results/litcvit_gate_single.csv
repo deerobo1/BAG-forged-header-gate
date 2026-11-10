@@ -1,0 +1,7 @@
+dataset,loss,clean,certified,clean_two,certified_two
+5gad2022,gated,91.4,100.0,92.9,100.0
+5gad2022,views,91.5,100.0,92.9,100.0
+mcfp,gated,73.6,98.7,88.7,98.6
+mcfp,views,89.3,98.5,88.7,98.6
+mcfp_strict,gated,99.6,99.9,99.6,99.9
+mcfp_strict,views,99.1,99.7,99.6,99.9

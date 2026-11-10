@@ -1,0 +1,27 @@
+# 5GAD-2022 normal traffic: a prefix of each allcap file (35.5 GB in full).
+# Taking a prefix of every file keeps the whole span for a time split. Normal-1UE
+# files get 128 MB and Normal-2UE files 48 MB: 16 MB prefixes gave only ~1,600
+# flows, and 2UE is mostly a few long video streams (3-27 flows per 16 MB).
+# Remove or raise the numbers to extend. The attacks (135 MB) come with `git lfs pull --include
+# "Attacks/**"` in the clone at C:\data\CNS_proj\raw\5GAD-2022.
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-1UE/allcap_00001_20220606131007.pcapng 128
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-1UE/allcap_00002_20220606171007.pcapng 128
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-1UE/allcap_00003_20220606211007.pcapng 128
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-1UE/allcap_00004_20220607011007.pcapng 128
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-1UE/allcap_00005_20220607051008.pcapng 128
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-1UE/allcap_00006_20220607091008.pcapng 128
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00000.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00001.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00002.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00003.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00004.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00005.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00006.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00007.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00008.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00009.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00010.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00011.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00012.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00013.pcapng 48
+https://media.githubusercontent.com/media/IdahoLabResearch/5GAD/main/Normal-2UE/allcap_20220613162057_00014.pcapng 48

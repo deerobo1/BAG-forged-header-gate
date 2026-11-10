@@ -1,0 +1,39 @@
+# MCFP captures for LitCVit's MCFP classes (the paper names the families but
+# not the captures). Malware: the 2018 batch 341-347 holds one capture per
+# named family (Stratosphere's malware list, checked 2026-10-27); "Botnet" is
+# the only capture that list labels with a generic botnet family (157-1).
+# Benign: the CTU-Normal captures with full pcaps (13 is empty, 4/5/6/10 are
+# DNS-only or have no pcap). LitCVit's "600 benign PCAP files" can't be matched.
+#
+# Pcaps only: never the .zip files (live malware binaries). The CTU server and
+# this link give ~300 KB/s in total, so most pcaps are taken as prefixes: 64 MB
+# of malware, 32 MB of normal. Remove the numbers to extend.
+#
+# The 2018 captures (341-347) were recorded on a shared lab segment: most of
+# their packets are other machines' IPv6 multicast, IGMP and SSDP. Only flows
+# with the infected host named in each README count as malware
+# (baselines/header_payload.py, mcfp_class).
+
+# malware
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-341-1/2018-03-27_win23.pcap      # Trojan Downloader, 193 MB: whole, its first 64 MB has no infected-host traffic
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-345-1/2018-04-03_win11.pcap      # Cobalt, 150 MB: whole, 64 MB gave only 485 infected-host flows
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-346-1/2018-04-03_win12.pcap 64   # Dridex, 234 MB
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-347-1/2018-04-04_win16.pcap 64   # BitCoinMiner, 263 MB
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Malware-Capture-Botnet-157-1/2015-05-01_linux-1.pcap    # Linux botnet (unknown family), 73 MB
+
+# normal
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-7/2013-12-17_capture1.pcap 32                    # home Linux notebook, P2P, 417 MB
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-12/2013-12-17_capture1.pcap 32                   # Linux notebook, P2P + web, 848 MB
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-20/2017-04-30_win-normal.pcap 32                 # 20-32: HTTPS captures (Strasak)
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-21/2017-05-02_kali-normal.pcap 32
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-22/2017-05-02_kali-normal.pcap 32
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-23/2017-04-18_win-normal.pcap 32
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-24/2017-04-19_win-normal.pcap 32
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-25/2017-04-25_win-normal.pcap 32
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-26/2017-04-28_normal.pcap 32
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-27/2017_04_30-normal.pcap 32
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-28/2017-05-01_normal.pcap 32
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-29/2017-05-01_normal.pcap 32
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-30/2017-05-01_normal.pcap 32
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-31/2017-05-01_normal.pcap 32
+https://mcfp.felk.cvut.cz/publicDatasets/CTU-Normal-32/2017-05-02_normal.pcap 32

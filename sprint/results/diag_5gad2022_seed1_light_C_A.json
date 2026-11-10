@@ -1,0 +1,99 @@
+{
+ "run": "5gad2022",
+ "job": "seed1_light",
+ "variant": "C_A",
+ "evaded_g": 92.11,
+ "attempt_share_benign": {
+  "F": 72.65,
+  "B": 72.32,
+  "C": 20.65
+ },
+ "attempt_cleared": 15.88,
+ "cleared_by_setting": {
+  "header": {
+   "0": 12.13,
+   "1": 19.46
+  },
+  "op": {
+   "add": 6.68,
+   "split": 23.3,
+   "add+split": 16.89
+  },
+  "copies": {
+   "1": 14.11,
+   "2": 10.4,
+   "3": 23.05
+  },
+  "position": {
+   "None": 10.08,
+   "0": 34.66,
+   "1": 9.11,
+   "2": 8.39,
+   "3": 15.38,
+   "4": 17.65
+  },
+  "size": {
+   "1": 4.54,
+   "2": 4.72,
+   "4": 3.54,
+   "8": 3.98,
+   "16": 33.12,
+   "32": 45.01
+  }
+ },
+ "evaded_by_class": {
+  "AMFDel": {
+   "flows": 160,
+   "evaded": 89.38
+  },
+  "AMFIns": {
+   "flows": 79,
+   "evaded": 91.14
+  },
+  "AMFUDM": {
+   "flows": 80,
+   "evaded": 86.25
+  },
+  "CrashNRF": {
+   "flows": 80,
+   "evaded": 96.25
+  },
+  "GetAllNFs": {
+   "flows": 80,
+   "evaded": 93.75
+  },
+  "GetUData": {
+   "flows": 80,
+   "evaded": 98.75
+  },
+  "rndAMFIns": {
+   "flows": 160,
+   "evaded": 90.62
+  },
+  "rndDump": {
+   "flows": 79,
+   "evaded": 94.94
+  }
+ },
+ "cleared_attempts": 1972,
+ "cleared_features_match_benign_train": 25.91,
+ "cleared_features_match_malware_train": 0.0,
+ "clean_malware_match_benign_train": 0.0,
+ "benign_train_flows": 4258,
+ "benign_unique_feature_rows": 418,
+ "top_cleared_rows": {
+  "columns": "per packet: present proto total flags payload",
+  "1 6 60 2 0 1 6 60 18 0 1 6 52 16 0 1 6 84 16 32 1 6 84 16 32": 707,
+  "1 6 60 2 0 1 6 60 18 0 1 6 52 16 0 1 6 68 16 16 1 6 68 16 16": 601,
+  "1 6 60 2 0 1 6 60 2 0 1 6 60 2 0 1 6 60 2 0 1 6 60 18 0": 511,
+  "1 6 60 2 0 1 6 60 18 0 1 6 52 16 0 1 6 52 16 0 1 6 84 16 32": 66,
+  "1 6 60 2 0 1 6 60 2 0 1 6 60 18 0 1 6 52 16 0 1 6 84 16 32": 54
+ },
+ "top_benign_train_rows": {
+  "1 6 60 2 0 1 6 60 18 0 1 6 52 16 0 1 6 569 24 517 1 6 52 16 0": 596,
+  "1 6 60 2 0 1 6 60 18 0 1 6 52 16 0 1 6 635 24 583 1 6 52 16 0": 501,
+  "1 17 201 0 173 1 17 201 0 173 1 17 201 0 173 1 17 201 0 173 0 0 40 0 0": 241,
+  "1 17 78 0 50 0 0 40 0 0 0 0 40 0 0 0 0 40 0 0 0 0 40 0 0": 97,
+  "1 6 60 2 0 1 6 60 18 0 1 6 52 16 0 1 6 116 24 64 1 6 52 16 0": 94
+ }
+}

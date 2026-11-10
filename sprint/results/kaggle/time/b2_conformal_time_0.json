@@ -1,0 +1,233 @@
+[
+ {
+  "run": "5gad2022",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20",
+  "threshold": -0.00020922409773116766,
+  "coverage": 97.24,
+  "target": 95.0,
+  "benign_recall": 99.62,
+  "argmax_certified": 100.0
+ },
+ {
+  "run": "5gad2022",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20_laterhalf",
+  "threshold": -0.00020922409773116766,
+  "coverage": 97.24,
+  "target": 95.0,
+  "benign_recall": 97.76,
+  "argmax_certified": 100.0
+ },
+ {
+  "run": "5gad2022",
+  "split": "time",
+  "seed": 0,
+  "calibration": "rolling_test_firsthalf",
+  "threshold": -Infinity,
+  "coverage": 100.0,
+  "target": 95.0,
+  "benign_recall": 0.0,
+  "argmax_certified": 100.0
+ },
+ {
+  "run": "mcfp",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20",
+  "threshold": -0.01732498177455736,
+  "coverage": 88.4,
+  "target": 95.0,
+  "benign_recall": 97.4,
+  "argmax_certified": 97.7
+ },
+ {
+  "run": "mcfp",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20_laterhalf",
+  "threshold": -0.01732498177455736,
+  "coverage": 88.51,
+  "target": 95.0,
+  "benign_recall": 92.94,
+  "argmax_certified": 97.68
+ },
+ {
+  "run": "mcfp",
+  "split": "time",
+  "seed": 0,
+  "calibration": "rolling_test_firsthalf",
+  "threshold": -0.2878711296601765,
+  "coverage": 96.84,
+  "target": 95.0,
+  "benign_recall": 90.59,
+  "argmax_certified": 97.68
+ },
+ {
+  "run": "mcfp_strict",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20",
+  "threshold": -6.303004347243222e-05,
+  "coverage": 93.42,
+  "target": 95.0,
+  "benign_recall": 99.85,
+  "argmax_certified": 99.74
+ },
+ {
+  "run": "mcfp_strict",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20_laterhalf",
+  "threshold": -6.303004347243222e-05,
+  "coverage": 93.42,
+  "target": 95.0,
+  "benign_recall": 99.67,
+  "argmax_certified": 99.74
+ },
+ {
+  "run": "mcfp_strict",
+  "split": "time",
+  "seed": 0,
+  "calibration": "rolling_test_firsthalf",
+  "threshold": -Infinity,
+  "coverage": 100.0,
+  "target": 95.0,
+  "benign_recall": 0.0,
+  "argmax_certified": 99.74
+ },
+ {
+  "run": "ciciot2022",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20",
+  "threshold": -0.0005732528738553108,
+  "coverage": 61.06,
+  "target": 95.0,
+  "benign_recall": 98.39,
+  "argmax_certified": 68.67
+ },
+ {
+  "run": "ciciot2022",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20_laterhalf",
+  "threshold": -0.0005732528738553108,
+  "coverage": 32.35,
+  "target": 95.0,
+  "benign_recall": NaN,
+  "argmax_certified": 43.56
+ },
+ {
+  "run": "ciciot2022",
+  "split": "time",
+  "seed": 0,
+  "calibration": "rolling_test_firsthalf",
+  "threshold": -0.0005732528738553108,
+  "coverage": 32.35,
+  "target": 95.0,
+  "benign_recall": NaN,
+  "argmax_certified": 43.56
+ },
+ {
+  "run": "tii_ssrc23",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20",
+  "threshold": -0.00032055574887335236,
+  "coverage": 71.35,
+  "target": 95.0,
+  "benign_recall": 98.17,
+  "argmax_certified": 99.9
+ },
+ {
+  "run": "tii_ssrc23",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20_laterhalf",
+  "threshold": -0.00032055574887335236,
+  "coverage": 92.29,
+  "target": 95.0,
+  "benign_recall": NaN,
+  "argmax_certified": 99.85
+ },
+ {
+  "run": "tii_ssrc23",
+  "split": "time",
+  "seed": 0,
+  "calibration": "rolling_test_firsthalf",
+  "threshold": -0.4323246139925732,
+  "coverage": 99.85,
+  "target": 95.0,
+  "benign_recall": NaN,
+  "argmax_certified": 99.85
+ },
+ {
+  "run": "iot23",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20",
+  "threshold": -0.009687377641305124,
+  "coverage": 80.83,
+  "target": 95.0,
+  "benign_recall": 96.85,
+  "argmax_certified": 99.9
+ },
+ {
+  "run": "iot23",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20_laterhalf",
+  "threshold": -0.009687377641305124,
+  "coverage": 88.57,
+  "target": 95.0,
+  "benign_recall": 96.85,
+  "argmax_certified": 99.87
+ },
+ {
+  "run": "iot23",
+  "split": "time",
+  "seed": 0,
+  "calibration": "rolling_test_firsthalf",
+  "threshold": -0.031125875426116223,
+  "coverage": 99.85,
+  "target": 95.0,
+  "benign_recall": 96.85,
+  "argmax_certified": 99.87
+ },
+ {
+  "run": "ustc",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20",
+  "threshold": -2.609388451202399e-06,
+  "coverage": 82.8,
+  "target": 95.0,
+  "benign_recall": 99.75,
+  "argmax_certified": 99.94
+ },
+ {
+  "run": "ustc",
+  "split": "time",
+  "seed": 0,
+  "calibration": "static_train_late20_laterhalf",
+  "threshold": -2.609388451202399e-06,
+  "coverage": 82.58,
+  "target": 95.0,
+  "benign_recall": NaN,
+  "argmax_certified": 99.94
+ },
+ {
+  "run": "ustc",
+  "split": "time",
+  "seed": 0,
+  "calibration": "rolling_test_firsthalf",
+  "threshold": -1.1320925665248005e-05,
+  "coverage": 96.99,
+  "target": 95.0,
+  "benign_recall": NaN,
+  "argmax_certified": 99.94
+ }
+]

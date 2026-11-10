@@ -1,0 +1,37 @@
+__pycache__/
+.pytest_cache/
+# IEEE-copyrighted paper copies stay local
+*.pdf
+# ...except our own final paper
+!paper/BAG_paper.pdf
+
+# LaTeX build by-products
+*.aux
+*.bbl
+*.blg
+*.log
+paper/overleaf_upload.zip
+paper/main_old.tex
+
+# large local archives and scratch
+results (2).zip
+*.zip
+Screenshot*.png
+
+# Working notes, internal reviews and run logs: kept locally, not published
+prompt.txt
+plan.txt
+updates.md
+paper/BLOCKERS.md
+paper/FORMAT_NOTES.md
+paper/LEDGER_CHECK.md
+paper/SELF_REVIEW.md
+paper/build/
+paper/hard_rule_grep.sh
+paper/list_sentences.py
+sprint3/BLOCKERS.md
+sprint3/NOVELTY_MATRIX.md
+sprint3/NOVELTY_VERDICT.md
+sprint3/REVIEWER_ATTACKS.md
+sprint3/results/smoke/
+*.log

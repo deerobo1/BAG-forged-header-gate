@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Datasets as used here: LitCVit's classes, labelled flows available and used (at most 10{,}000 per class), and the share of benign and attack flows with a TLS record in their first five packets. Max attack is the most-encrypted attack class.}
+\label{tab:datasets}
+\setlength{\tabcolsep}{2pt}
+\scriptsize
+\begin{tabular}{lrrrrrl}
+\toprule
+Dataset & Classes & Available & Used & \multicolumn{2}{c}{TLS \%} & Max attack (TLS \%) \\
+\cmidrule(lr){5-6}
+ & & & & Benign & Attack & \\
+\midrule
+USTC-TFC2016 & 11 & 562{,}415 & 105{,}464 & 8.3 & 0.9 & Htbot (7.0) \\
+CICIoT2022 & 4 & 274{,}839 & 23{,}339 & 37.9 & 0.0 & Flood (0.0) \\
+5GAD-2022 & 9 & 9{,}307 & 9{,}307 & 62.0 & 0.0 & AMFDel (0.0) \\
+MCFP & 6 & 38{,}234 & 18{,}493 & 17.1 & 33.0 & Cobalt (98.1) \\
+IoT-23 & 6 & 371{,}433 & 49{,}035 & 0.1 & 0.0 & C\&C (0.0) \\
+TII-SSRC-23 & 5 & 310{,}526 & 40{,}819 & 16.6 & 0.0 & Mirai (0.1) \\
+\bottomrule
+\end{tabular}
+\end{table}

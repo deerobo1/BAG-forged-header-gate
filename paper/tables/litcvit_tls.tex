@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Recall (\%) on TLS test flows, random split, seed 0: flows as recorded (Clean), with the shortcut fields set to random bytes (Rand.) or zeroed (Zero). MCFP classes use the strict label rule.}
+\label{tab:litcvit-tls}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+ &  & \multicolumn{3}{c}{LitCVit} & \multicolumn{3}{c}{Shortcut-aware} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+Class & Flows & Clean & Rand. & Zero & Clean & Rand. & Zero \\
+\midrule
+Cobalt & 96 & 100.0 & 43.8 & 0.0 & 100.0 & 44.8 & 36.5 \\
+Dridex & 487 & 100.0 & 0.0 & 0.0 & 99.8 & 99.6 & 99.8 \\
+MCFP$_{s}$ Benign & 349 & 100.0 & 100.0 & 100.0 & 100.0 & 100.0 & 57.0 \\
+Htbot & 124 & 100.0 & 0.0 & 1.6 & 100.0 & 96.8 & 2.4 \\
+Shifu & 66 & 100.0 & 0.0 & 0.0 & 100.0 & 100.0 & 0.0 \\
+USTC Benign & 157 & 100.0 & 100.0 & 58.6 & 100.0 & 100.0 & 61.1 \\
+\bottomrule
+\end{tabular}
+\end{table}

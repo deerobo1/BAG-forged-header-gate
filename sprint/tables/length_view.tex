@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Malware let through (\%) by the worst packet attack, (c)--(g), for the gate and the gate plus the length view C trained with added packets. Random split: mean of 3 seeds; (u) is the adaptive attacker with unseen parameters; $\Delta$ is the change from the gate. Time: the split by time, seed 0.}
+\label{tab:length-view}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Run & Gate worst & +C worst & +C (u) & $\Delta$F1 & $\Delta$Ben. & Time: gate & Time: +C & Passes \\
+\midrule
+5GAD & 99.9 & 71.2 & 91.5 & -0.1 & -0.2 & 100.0 & 73.7 & 0/3, - \\
+CICIoT & 23.1 & 0.2 & 0.1 & 0.1 & -0.3 & 49.6 & 0.1 & 3/3, T \\
+IoT-23 & 42.9 & 1.1 & 0.1 & -0.1 & -0.7 & 42.5 & 0.0 & 3/3, T \\
+MCFP & 83.7 & 23.8 & 39.1 & -1.1 & -0.2 & 81.2 & 0.0 & 0/3, T \\
+MCFP$_{s}$ & 85.4 & 1.7 & 1.9 & -0.9 & -0.3 & 92.4 & 2.3 & 2/3, T \\
+TII & 0.5 & 0.0 & 0.0 & 0.1 & 0.0 & 1.1 & 0.0 & 3/3, T \\
+USTC & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 3/3, T \\
+\bottomrule
+\end{tabular}
+\end{table}

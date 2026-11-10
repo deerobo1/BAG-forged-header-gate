@@ -1,0 +1,29 @@
+\begin{table}[t]
+\centering
+\caption{Random-forest macro-F1 (\%) by input and split (seed 0). Header$_{\min}$ keeps only IP version, total length, protocol and TCP flags of each packet.}
+\label{tab:header-payload}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrr}
+\toprule
+Dataset / split & Full & Header & Payload & Full$_{\min}$ & Header$_{\min}$ \\
+\midrule
+USTC-TFC2016 random & 96.8 & 94.9 & 72.5 & 88.1 & 86.1 \\
+ time & 97.3 & 87.1 & 73.7 & 88.9 & 87.6 \\
+\addlinespace[2pt]
+CICIoT2022 random & 99.6 & 99.3 & 77.6 & 98.1 & 95.5 \\
+ time & 57.2 & 59.7 & 46.4 & 54.1 & 57.2 \\
+\addlinespace[2pt]
+5GAD-2022 random & 100.0 & 100.0 & 93.6 & 93.5 & 75.2 \\
+ time & 97.5 & 92.7 & 92.4 & 92.3 & 75.3 \\
+\addlinespace[2pt]
+MCFP random & 92.3 & 92.3 & 71.3 & 76.2 & 76.0 \\
+ time & 88.3 & 83.7 & 78.2 & 86.2 & 85.3 \\
+\addlinespace[2pt]
+IoT-23 random & 99.3 & 99.4 & 28.1 & 65.7 & 65.5 \\
+ time & 98.3 & 99.4 & 25.5 & 62.5 & 62.5 \\
+\addlinespace[2pt]
+TII-SSRC-23 random & 99.3 & 99.3 & 88.7 & 98.6 & 98.0 \\
+ time & 99.4 & 99.2 & 90.9 & 98.8 & 98.3 \\
+\bottomrule
+\end{tabular}
+\end{table}

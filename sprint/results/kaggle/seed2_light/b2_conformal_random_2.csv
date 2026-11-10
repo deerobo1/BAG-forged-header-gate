@@ -1,0 +1,8 @@
+run,split,seed,calibration,n_cal,threshold,n_eval_malware,n_eval_benign,coverage,target,benign_recall,argmax_certified
+5gad2022,random,2,random_halves,380,-4.552605774460483e-05,418,542,92.82,95.0,99.82,100.0
+mcfp,random,2,random_halves,817,-0.021234580079682274,881,1007,95.12,95.0,97.72,99.21
+mcfp_strict,random,2,random_halves,368,-0.0002388530745443816,407,1018,97.3,95.0,99.71,99.75
+ciciot2022,random,2,random_halves,2000,-0.0003141448322597218,2025,337,97.48,95.0,99.41,99.8
+tii_ssrc23,random,2,random_halves,3940,-0.3001601979141573,4060,93,99.88,95.0,94.62,99.9
+iot23,random,2,random_halves,3811,-0.02725652643432508,3996,1011,99.35,95.0,93.77,99.85
+ustc,random,2,random_halves,9427,-1.06141395213033e-05,9666,1031,97.48,95.0,100.0,99.97

@@ -1,0 +1,9 @@
+field,class,how,forged_packets,not_realizable_values
+TTL,free,IP_TTL socket option; used values >= 32 except as recorded,7500,0
+TOS (DSCP/ECN),free,IP_TOS socket option,7500,0
+DF bit,free,IP_MTU_DISCOVER,7500,0
+TCP window,free (range) / cost (exact per packet),"SO_RCVBUF, TCP_WINDOW_CLAMP; exact values need a custom stack",7500,0
+IP ID,cost,Linux chooses it; exact values need a raw socket (RFC 6864 allows any value),7500,0
+TCP options (same length),cost,MSS free via TCP_MAXSEG; scale and timestamps need a custom stack,1731,0
+ISN shift,free,"any ISN is valid (RFC 9293, RFC 6528)",7500,0
+IP / TCP checksum,derived,recomputed,7500,0

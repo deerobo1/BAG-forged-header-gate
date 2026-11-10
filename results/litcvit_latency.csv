@@ -1,0 +1,7 @@
+cpu,d,threads,parameters,macs_millions,ms_per_flow_median,ms_per_flow_p95,flows_per_s_batch32
+12th Gen Intel(R) Core(TM) i3-1220P,128,1,253470,122.98,8.1,14.58,129
+12th Gen Intel(R) Core(TM) i3-1220P,128,2,253470,122.98,5.85,8.64,162
+12th Gen Intel(R) Core(TM) i3-1220P,128,10,253470,122.98,8.23,10.96,152
+12th Gen Intel(R) Core(TM) i3-1220P,192,1,545950,263.41,10.25,12.23,81
+12th Gen Intel(R) Core(TM) i3-1220P,192,2,545950,263.41,8.88,12.14,102
+12th Gen Intel(R) Core(TM) i3-1220P,192,10,545950,263.41,10.6,13.84,94

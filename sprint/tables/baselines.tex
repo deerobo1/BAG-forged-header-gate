@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Reviewer baselines, random split, seed 0: the most malware let through (\%) over the 7 runs by header copying (a) and by the best of 8 random header sets (b), and the largest drop in macro-F1 against the gate.}
+\label{tab:baselines}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrr}
+\toprule
+Method & (a) max & (b) max & $\Delta$F1 min \\
+\midrule
+Plain & 88.5 & 100.0 & -8.0 \\
+AND of two plain & 78.3 & 99.8 & -9.0 \\
+Adversarial best-of-8 & 2.5 & 73.9 & -6.7 \\
+Gate & 0.4 & 0.7 & 0.0 \\
+Adversarial + gate & 0.0 & 0.4 & -7.2 \\
+XGBoost & 100.0 & 100.0 & 0.4 \\
+XGBoost + gate & 0.9 & 0.8 & 0.2 \\
+\bottomrule
+\end{tabular}
+\end{table}

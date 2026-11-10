@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Macro-F1 (\%) of the baselines in LitCVit's Table VII: as reported there (three datasets only) and in our runs, mean over 3 seeds. Standard deviations on the random split are at most 2.0 points; on the time split XGBoost gives the same result for every seed. MCFP$_{s}$ keeps only flows the infected host starts (Benign, Cobalt, Dridex).}
+\label{tab:table7}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{2}{c}{Reported} & \multicolumn{2}{c}{Random} & \multicolumn{2}{c}{Time} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Dataset & XGB & CNN & XGB & CNN & XGB & CNN \\
+\midrule
+USTC-TFC2016 & 92.7 & 90.0 & 97.8 & 96.9 & 97.0 & 95.8 \\
+CICIoT2022 & 91.4 & 83.7 & 99.9 & 99.0 & 59.3 & 59.4 \\
+5GAD-2022 & -- & -- & 100.0 & 94.2 & 87.6 & 92.3 \\
+MCFP & 63.5 & 64.5 & 93.5 & 94.5 & 74.5 & 85.5 \\
+MCFP$_{s}$ & -- & -- & 99.9 & 99.5 & 81.5 & 99.7 \\
+IoT-23 & -- & -- & 99.4 & 99.2 & 99.4 & 99.3 \\
+TII-SSRC-23 & -- & -- & 99.8 & 99.4 & 99.4 & 99.2 \\
+\bottomrule
+\end{tabular}
+\end{table}

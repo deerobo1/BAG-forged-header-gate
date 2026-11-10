@@ -1,0 +1,6 @@
+dataset,input,encoder,accuracy,macro_f1,recall
+5gad2022,raw bytes,-,99.95,99.9,"{""AMFDel"": 99.4, ""AMFIns"": 100.0, ""AMFUDM"": 100.0, ""CrashNRF"": 100.0, ""GetAllNFs"": 100.0, ""GetUData"": 100.0, ""Normal"": 100.0, ""rndAMFIns"": 100.0, ""rndDump"": 100.0}"
+5gad2022,packet tokens,pretrained,79.7,57.31,"{""AMFDel"": 39.4, ""AMFIns"": 45.6, ""AMFUDM"": 32.5, ""CrashNRF"": 57.5, ""GetAllNFs"": 35.0, ""GetUData"": 100.0, ""Normal"": 99.9, ""rndAMFIns"": 73.8, ""rndDump"": 30.4}"
+5gad2022,flow embedding,pretrained,70.35,37.14,"{""AMFDel"": 31.9, ""AMFIns"": 13.9, ""AMFUDM"": 10.0, ""CrashNRF"": 10.0, ""GetAllNFs"": 15.0, ""GetUData"": 81.2, ""Normal"": 99.2, ""rndAMFIns"": 57.5, ""rndDump"": 10.1}"
+5gad2022,packet tokens,untrained,92.86,84.12,"{""AMFDel"": 73.8, ""AMFIns"": 46.8, ""AMFUDM"": 88.8, ""CrashNRF"": 100.0, ""GetAllNFs"": 92.5, ""GetUData"": 100.0, ""Normal"": 100.0, ""rndAMFIns"": 100.0, ""rndDump"": 57.0}"
+5gad2022,flow embedding,untrained,88.18,73.48,"{""AMFDel"": 63.7, ""AMFIns"": 44.3, ""AMFUDM"": 65.0, ""CrashNRF"": 87.5, ""GetAllNFs"": 52.5, ""GetUData"": 100.0, ""Normal"": 100.0, ""rndAMFIns"": 99.4, ""rndDump"": 48.1}"

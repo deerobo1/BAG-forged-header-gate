@@ -1,0 +1,95 @@
+{
+ "run": "5gad2022",
+ "job": "seed0",
+ "variant": "C_AS",
+ "evaded_g": 34.96,
+ "attempt_share_benign": {
+  "F": 56.13,
+  "B": 71.6,
+  "C": 3.62
+ },
+ "attempt_cleared": 2.69,
+ "cleared_by_setting": {
+  "header": {
+   "0": 2.05,
+   "1": 3.31
+  },
+  "op": {
+   "add": 4.51,
+   "split": 0.0,
+   "add+split": 3.75
+  },
+  "copies": {
+   "1": 0.0,
+   "2": 0.0,
+   "3": 8.22
+  },
+  "position": {
+   "None": 0.0,
+   "0": 15.56,
+   "1": 0.0,
+   "2": 0.0,
+   "3": 0.0,
+   "4": 0.0
+  },
+  "size": {
+   "1": 2.68,
+   "2": 3.15,
+   "4": 2.45,
+   "8": 2.12,
+   "16": 2.99,
+   "32": 2.74
+  }
+ },
+ "evaded_by_class": {
+  "AMFDel": {
+   "flows": 160,
+   "evaded": 36.88
+  },
+  "AMFIns": {
+   "flows": 79,
+   "evaded": 34.18
+  },
+  "AMFUDM": {
+   "flows": 80,
+   "evaded": 32.5
+  },
+  "CrashNRF": {
+   "flows": 80,
+   "evaded": 30.0
+  },
+  "GetAllNFs": {
+   "flows": 80,
+   "evaded": 35.0
+  },
+  "GetUData": {
+   "flows": 80,
+   "evaded": 48.75
+  },
+  "rndAMFIns": {
+   "flows": 160,
+   "evaded": 34.38
+  },
+  "rndDump": {
+   "flows": 79,
+   "evaded": 26.58
+  }
+ },
+ "cleared_attempts": 334,
+ "cleared_features_match_benign_train": 100.0,
+ "cleared_features_match_malware_train": 0.0,
+ "clean_malware_match_benign_train": 0.0,
+ "benign_train_flows": 4258,
+ "benign_unique_feature_rows": 413,
+ "top_cleared_rows": {
+  "columns": "per packet: present proto total flags payload",
+  "1 6 60 2 0 1 6 60 2 0 1 6 60 2 0 1 6 60 2 0 1 6 60 18 0": 334
+ },
+ "top_benign_train_rows": {
+  "1 6 60 2 0 1 6 60 18 0 1 6 52 16 0 1 6 569 24 517 1 6 52 16 0": 593,
+  "1 6 60 2 0 1 6 60 18 0 1 6 52 16 0 1 6 635 24 583 1 6 52 16 0": 535,
+  "1 17 201 0 173 1 17 201 0 173 1 17 201 0 173 1 17 201 0 173 0 0 40 0 0": 245,
+  "1 17 78 0 50 0 0 40 0 0 0 0 40 0 0 0 0 40 0 0 0 0 40 0 0": 99,
+  "1 6 60 2 0 1 6 60 18 0 1 6 52 16 0 1 6 116 24 64 1 6 52 16 0": 93
+ }
+}

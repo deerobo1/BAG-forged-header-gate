@@ -1,0 +1,74 @@
+[
+ {
+  "method": "F",
+  "batch": 1,
+  "ms_per_flow": 22.8559,
+  "params": 698921,
+  "macs": 13185248,
+  "c_trees": 0,
+  "threads": 12,
+  "latency_ratio": 1.0,
+  "macs_ratio": 1.0,
+  "params_ratio": 1.0
+ },
+ {
+  "method": "F",
+  "batch": 256,
+  "ms_per_flow": 3.2585,
+  "params": 698921,
+  "macs": 13185248,
+  "c_trees": 0,
+  "threads": 12,
+  "latency_ratio": 1.0,
+  "macs_ratio": 1.0,
+  "params_ratio": 1.0
+ },
+ {
+  "method": "F+B",
+  "batch": 1,
+  "ms_per_flow": 45.8487,
+  "params": 1397842,
+  "macs": 26370496,
+  "c_trees": 0,
+  "threads": 12,
+  "latency_ratio": 2.01,
+  "macs_ratio": 2.0,
+  "params_ratio": 2.0
+ },
+ {
+  "method": "F+B",
+  "batch": 256,
+  "ms_per_flow": 5.7142,
+  "params": 1397842,
+  "macs": 26370496,
+  "c_trees": 0,
+  "threads": 12,
+  "latency_ratio": 1.75,
+  "macs_ratio": 2.0,
+  "params_ratio": 2.0
+ },
+ {
+  "method": "F+B+C",
+  "batch": 1,
+  "ms_per_flow": 64.336,
+  "params": 1397842,
+  "macs": 26370496,
+  "c_trees": 1800,
+  "threads": 12,
+  "latency_ratio": 2.81,
+  "macs_ratio": 2.0,
+  "params_ratio": 2.0
+ },
+ {
+  "method": "F+B+C",
+  "batch": 256,
+  "ms_per_flow": 5.8137,
+  "params": 1397842,
+  "macs": 26370496,
+  "c_trees": 1800,
+  "threads": 12,
+  "latency_ratio": 1.78,
+  "macs_ratio": 2.0,
+  "params_ratio": 2.0
+ }
+]

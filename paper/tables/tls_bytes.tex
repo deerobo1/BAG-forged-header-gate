@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{What the first five packets of TLS flows hold: payload bytes kept in the image, and how many are plaintext (handshake, record headers) or ciphertext. Totals cover all six datasets.}
+\label{tab:tls-bytes}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrr}
+\toprule
+TLS flows of & Flows & Bytes/flow & Plain \% & Cipher \% & \shortstack{Flows with\\cipher \%} \\
+\midrule
+Htbot & 563 & 225 & 98.5 & 1.5 & 4.1 \\
+Shifu & 313 & 88 & 100.0 & 0.0 & 0.0 \\
+Cobalt & 476 & 179 & 83.1 & 16.9 & 47.5 \\
+Dridex & 2{,}320 & 150 & 100.0 & 0.0 & 0.0 \\
+\midrule
+All attack & 3{,}701 & 161 & 96.8 & 3.1 & 6.9 \\
+All benign & 7{,}208 & 276 & 63.7 & 36.2 & 29.9 \\
+\bottomrule
+\end{tabular}
+\end{table}
